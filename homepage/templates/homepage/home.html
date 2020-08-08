@@ -1,0 +1,366 @@
+{% extends 'homepage/base.html' %}
+
+{% load static %}
+
+{% block home %}active{% endblock home %}
+
+{% block homebody %}
+<div class="page-header">
+    <h3 class="page-title">
+        Innogr Products
+    </h3>
+</div>
+<div class="row">
+    <div class="col-md-3 grid-margin stretch-card">
+        <div class="card">
+            <img class="card-img-top" src="/static/innogrApp/images/government/fruit.jpeg" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">FARMING</h4>
+                <p class="card-text"style="font-size: 18px; font-family: Montserrat;">The Innogr farmers site gives services that cater for all the aspect of a farmer's life. making use of
+                    unutilized agriculture, the platform will analyze and visual such data to enable farmers to use it for their own good.
+                    It also has added advantages such as enabling farmers to get market, transport and suppliers of agricultural inputs and outputs,
+                    information on the newest farming techniques, newsfeed, prices of agricultural produce, ongoing agricultural project procedures and best
+                    of all a collaboration platform where farmers can get intouch with people from other departments of agriculture.</p>
+                <a href="#" class="productmore btn btn-sm mt-3 mb-4">Start Service</a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 grid-margin stretch-card">
+        <div class="card">
+            <img class="card-img-top" src="/static/innogrApp/images/government/iot.jpeg" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Agriculture IOT</h4>
+                <p class="card-text" style="font-size: 18px; font-family: Montserrat;">Offering state of the art sensors and communication devices
+                    that can easily be planted in gardens or projects that
+                    connects to a rich dashboard with easy access and offers
+                    more analytics and visualizations of data from the garden. farmers will view
+                    predictions and more</p>
+                <a href="{% url 'blog-home' %}" class="productmore btn btn-sm mt-3 mb-4">Start
+                    Service</a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 grid-margin stretch-card">
+
+        <div class="card">
+            <img class="card-img-top" src="/static/innogrApp/images/government/farmer.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Agro Business</h4>
+                <p class="card-text" style="font-size: 18px; font-family: Montserrat;">
+                    A platform that incorporates all agricultural business services according to your particular
+                            sector
+                            This include provision of the nearest store locations and all the different items sold with
+                            prices and
+                            contacts and also access to your closest and most accessible produce buyer and seller with
+                            accurate
+                            future price prediction
+                </p>
+                <a href="#" class="productmore btn btn-sm mt-3 mb-4">Start Service</a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 grid-margin stretch-card">
+
+        <div class="card">
+            <img class="card-img-top" src="/static/innogrApp/images/government/student.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Classroom</h4>
+                <p class="card-text" style="font-size: 18px; font-family: Montserrat;">
+                    Innogr Classroom is an app that is customized to train students and farmers on best
+                    Agricultural
+                    practices, recent technologies in agriculture with emphasis on precision farming, all this
+                    using
+                    data science and analytics to achieve production of higher quality foods in a larger
+                    quantity sustainably so that the
+                    gobal target of increasing food production by 70 % will be met by 2050
+                </p>
+                <a href="{% url 'innogrlearn' %}" class="productmore btn btn-sm mt-3 mb-4">Start Service</a>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="row">
+    <div class="col-md-4 grid-margin stretch-card">
+        <div class="card rounded mb-0">
+            <div class="card-body p-2">
+                <div class="media">
+                    <div class="media-body">
+                        <h6>Innogr Classroom<span style="color: darkgray;"> A class like no other</span></h6>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-md-4 grid-margin stretch-card">
+        <div class="card rounded mb-0">
+            <div class="card-body p-2">
+                <div class="media">
+                    <div class="media-body">
+                        <h6>Agro Business<span style="color: darkgray;"> A Business like no other</span></h6>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+
+    <div class="col-md-4 grid-margin stretch-card">
+        <div class="card rounded mb-0">
+            <div class="card-body p-3">
+                <div class="media">
+                    <div class="media-body">
+                        <img src="/static/innogrApp/images/government/tractor.jpg" alt="image"
+                            class="documentimage mr-3 mb-3 ">
+
+                        <p
+                            style="font-size: 18px; font-family: Montserrat;">
+                            Innogr Classroom is an app that is customized to train students and farmers on best
+                            Agricultural
+                            practices, recent technologies in agriculture with emphasis on precision farming, all this
+                            using
+                            data science and analytics to achieve production of higher quality foods in a larger
+                            quantity sustainably so that the
+                            gobal target of increasing food production by 70 % will be met by 2050
+                        </p>
+
+                        <p
+                            style="font-size: 18px; font-family: Montserrat;">
+                            Users on Innogr Classroom are purely engaged in learning new skills offered by some of the
+                            most
+                            qualified tutors that aim at equiping students with skills to maximize analysis from
+                            agricultural data such as
+                        <ul style="font-size: 18px; font-family: Montserrat;">
+                            <li>IoT skills</li>
+                            <li>Soil management</li>
+                            <li>Water management</li>
+                            <li>Cropping system management</li>
+                            <li>Fertilization</li>
+                            <li>Planting or Sowing</li>
+                            <li>Crop maintenance</li>
+                            <li>pPotection management</li>
+                            <li>Harvesting</li>
+                            <li>Storage</li>
+                        </ul>
+                        </p>
+                        <p style="font-size: 18px; font-family: Montserrat;">
+                        Students on Innogr Classroom can also ask agricultural questions, have access to farm project
+                        management techniques and many others
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-4 grid-margin stretch-card">
+        <div class="card rounded mb-0">
+            <div class="card-body p-3">
+                <div class="media">
+                    <div class="media-body">
+                        <img src="/static/innogrApp/images/government/student.jpg" alt="image"
+                            class="documentimage mr-3 mb-3 ">
+
+                        <p
+                            style="font-size: 18px; font-family: Montserrat;">
+                            A platform that incorporates all agricultural business services according to your particular
+                            sector
+                            This include provision of the nearest store locations and all the different items sold with
+                            prices and
+                            contacts and also access to your closest and most accessible produce buyer and seller with
+                            accurate
+                            future price prediction
+                        </p>
+
+                        <p
+                            style="font-size: 18px; font-family: Montserrat;">
+                            The INNOGR platform has several application systems in which agrobusiness incorporates all
+                            agricultural
+                            business services according to your particular sector. In this service we provide two
+                            different platforms
+                            The produce management platform and store platform
+                            <strong>The produce management</strong> platform is mainly for the produce sellers and buys.
+                            It gives the access to the
+                            closest and most accessible Agro product sellers and consumers like retailers, small scale
+                            sellers and
+                            processors providing accurate price predictions and others additionally services
+                            The produce management provides price analysisseasonal production predictions news feed
+                            trends in
+                            agriculture chat room
+                            <strong>Store platform </strong> allows shop and store owners dealing in agriculture to
+                            create and online store
+                            An online store contains all the items sold in your actual store with accurate prices which
+                            is editor by the
+                            shop keeper and make adds to advertise the products .this online stores are accessible by
+                            anyone who
+                            joins INNOGR
+                            We don’t provide online money transactions but provide market to store owners
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-lg-4 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Most Asked Questions</h4>
+            <div class="accordion accordion-filled" id="accordion-7" role="tablist">
+              <div class="card">
+                <div class="card-header" role="tab" id="heading-7">
+                  <h5 class="mb-0">
+                    <a data-toggle="collapse" href="#collapse-7" aria-expanded="false" aria-controls="collapse-7">
+                      Can I transfer the money from the wallet to my bank account?
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapse-7" class="collapse" role="tabpanel" aria-labelledby="heading-7" data-parent="#accordion-3">
+                  <div class="card-body">
+                    You can at any time reclaim your money to your bank account that you have registered with us. If there are no registered account, then you can add an account in the ‘Register Bank Account’ page.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" role="tab" id="heading-8">
+                  <h5 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" href="#collapse-8" aria-expanded="true" aria-controls="collapse-8">
+                      I forgot my account password. What should I do?
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapse-8" class="collapse show" role="tabpanel" aria-labelledby="heading-8" data-parent="#accordion-3">
+                  <div class="card-body">
+                    <ol class="pl-3">
+                      <li>Click on the ‘forgot password’ link.</li>
+                      <li>Enter your email address registered with us</li>
+                      <li>Click on the link sent you in the email</li>
+                      <li>Reset your password</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" role="tab" id="heading-9">
+                  <h5 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" href="#collapse-9" aria-expanded="false" aria-controls="collapse-9">
+                      What should I do if I need any assistance using my account
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapse-9" class="collapse" role="tabpanel" aria-labelledby="heading-9" data-parent="#accordion-3">
+                  <div class="card-body">
+                    If you need any assistance while using your account, you can contact our customer support via email at support@abc.com. Or you can live chat with our support team. Our support team is available 24*7
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" role="tab" id="heading-10">
+                  <h5 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" href="#collapse-10" aria-expanded="false" aria-controls="collapse-9">
+                      What should I do if I need any assistance using my account
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapse-10" class="collapse" role="tabpanel" aria-labelledby="heading-10" data-parent="#accordion-3">
+                  <div class="card-body">
+                    If you need any assistance while using your account, you can contact our customer support via email at support@abc.com. Or you can live chat with our support team. Our support team is available 24*7
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<div class="row">
+
+    <div class="col-md-4 h-100">
+        <div class="page-header">
+            <h3 class="page-title">
+                News Snippets
+            </h3>
+        </div>
+
+        <div class="fc-external-events">
+            {% for news in allnews_list %}
+            <div class='fc-event' >
+                <p style="font-size: 18px; font-family: Montserrat;"> {{ news.title}} <a href=" {{ news.link}}" target="_blank">more</a></p>
+                <p class="text-muted mb-0"> {{ news.newsdate}}</p>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+    <div class="col-md-8 h-100">
+        <div class="page-header">
+            <h3 class="page-title">
+                Trending Articles
+            </h3>
+        </div>
+        {% for post in posts %}
+
+        <div class="card rounded mb-2">
+            <div class="card-body p-3">
+                <div class="media">
+                    <img src="{{ post.author.profile.image.url }}" alt="image" class="img-pk mr-3 mb-3 rounded-circle">
+                    <div class="media-body">
+                        <h6 class="mb-1"><a href="{% url 'user-posts' post.author.username %}">{{post.author}}</a>
+                        </h6>
+                        <p>{{post.date_posted|date:"F d, Y"}}</p>
+                    </div>
+                </div>
+                <a class="d-block h5 mb-1" href="{% url 'post-detail' post.id %}">{{post.title}}</a>
+
+                <p class="mb-0 text-muted" style="font-size: 18px; font-family: Montserrat;">
+                    {{post.summary|safe}}
+                </p>
+                <div class="post-button">
+                    <p class="small text-muted mt-2 mb-0">
+                        <span class="">
+                            <i onClick="document.getElementById('likebutton').submit()"
+                                class="fa fa-heart mr-1"></i>{{post.likes}}
+                        </span>
+                        <span class="ml-2 ">
+                            <i onClick="document.getElementById('dislikebutton').submit()"
+                                class="fa fa-thumbs-down mr-1"></i>{{post.dislikes}}
+                        </span>
+                        <span class="ml-2 postmore">
+                            <a href="{% url 'post-detail' post.id %}" class="fa fa-ellipsis-h"></a>
+                        </span>
+                    </p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+
+{% endblock homebody %}

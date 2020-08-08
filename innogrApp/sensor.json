@@ -1,0 +1,702 @@
+[
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:30:54Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 226,
+    "timestamp": "2020-07-18T15:30:52Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:30:34Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 240,
+    "timestamp": "2020-07-18T15:30:33Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:30:16Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 31,
+    "timestamp": "2020-07-18T15:30:15Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:29:40Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 31,
+    "timestamp": "2020-07-18T15:29:37Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:29:21Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 31,
+    "timestamp": "2020-07-18T15:29:19Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:28:43Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 31,
+    "timestamp": "2020-07-18T15:28:41Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:28:25Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 31,
+    "timestamp": "2020-07-18T15:28:23Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:27:48Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 24,
+    "timestamp": "2020-07-18T15:27:46Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:27:30Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 32,
+    "timestamp": "2020-07-18T15:27:27Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:27:11Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 31,
+    "timestamp": "2020-07-18T15:27:08Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:26:52Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 31,
+    "timestamp": "2020-07-18T15:26:50Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:26:41Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 32,
+    "timestamp": "2020-07-18T15:26:31Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:26:13Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 33,
+    "timestamp": "2020-07-18T15:26:12Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:25:56Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 32,
+    "timestamp": "2020-07-18T15:25:54Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:25:40Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 33,
+    "timestamp": "2020-07-18T15:25:35Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:25:19Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 32,
+    "timestamp": "2020-07-18T15:25:16Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:25:01Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 31,
+    "timestamp": "2020-07-18T15:24:58Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:24:55Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 27,
+    "timestamp": "2020-07-18T15:24:39Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:24:21Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 10,
+    "timestamp": "2020-07-18T15:24:20Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:24:05Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 15,
+    "timestamp": "2020-07-18T15:24:02Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:23:45Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 11,
+    "timestamp": "2020-07-18T15:23:43Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:23:26Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 12,
+    "timestamp": "2020-07-18T15:23:24Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:23:08Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 11,
+    "timestamp": "2020-07-18T15:23:06Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:22:50Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 12,
+    "timestamp": "2020-07-18T15:22:47Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:22:31Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 12,
+    "timestamp": "2020-07-18T15:22:28Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:22:12Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 10,
+    "timestamp": "2020-07-18T15:22:10Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:21:53Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 11,
+    "timestamp": "2020-07-18T15:21:51Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:21:33Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 11,
+    "timestamp": "2020-07-18T15:21:32Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:21:15Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 11,
+    "timestamp": "2020-07-18T15:21:14Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T15:20:56Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 11,
+    "timestamp": "2020-07-18T15:20:55Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:56:51Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 17,
+    "timestamp": "2020-07-18T10:56:50Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:56:33Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 17,
+    "timestamp": "2020-07-18T10:56:31Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:56:16Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 17,
+    "timestamp": "2020-07-18T10:56:13Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:55:55Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 18,
+    "timestamp": "2020-07-18T10:55:54Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:55:20Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 18,
+    "timestamp": "2020-07-18T10:55:17Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:55:00Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 16,
+    "timestamp": "2020-07-18T10:54:58Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:54:42Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 16,
+    "timestamp": "2020-07-18T10:54:39Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:54:22Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 18,
+    "timestamp": "2020-07-18T10:54:21Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:54:04Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 17,
+    "timestamp": "2020-07-18T10:54:02Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:53:46Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 17,
+    "timestamp": "2020-07-18T10:53:43Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:53:25Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 18,
+    "timestamp": "2020-07-18T10:53:25Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:52:55Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 18,
+    "timestamp": "2020-07-18T10:52:47Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:45:17Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 17,
+    "timestamp": "2020-07-18T10:45:13Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:44:56Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 17,
+    "timestamp": "2020-07-18T10:44:54Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:44:37Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 17,
+    "timestamp": "2020-07-18T10:44:36Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:44:18Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 16,
+    "timestamp": "2020-07-18T10:44:17Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:43:59Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 18,
+    "timestamp": "2020-07-18T10:43:58Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:43:42Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 18,
+    "timestamp": "2020-07-18T10:43:40Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:43:03Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 18,
+    "timestamp": "2020-07-18T10:43:02Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:42:45Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 19,
+    "timestamp": "2020-07-18T10:42:44Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:42:26Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 19,
+    "timestamp": "2020-07-18T10:42:25Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:42:08Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 19,
+    "timestamp": "2020-07-18T10:42:06Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:41:48Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 18,
+    "timestamp": "2020-07-18T10:41:48Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:41:31Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 18,
+    "timestamp": "2020-07-18T10:41:29Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:41:19Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 18,
+    "timestamp": "2020-07-18T10:41:11Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:40:53Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 18,
+    "timestamp": "2020-07-18T10:40:52Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:40:33Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 18,
+    "timestamp": "2020-07-18T10:40:33Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:40:16Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 18,
+    "timestamp": "2020-07-18T10:40:15Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:39:56Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 18,
+    "timestamp": "2020-07-18T10:39:56Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:39:37Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 17,
+    "timestamp": "2020-07-18T10:39:37Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:39:20Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 18,
+    "timestamp": "2020-07-18T10:39:19Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:39:01Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 18,
+    "timestamp": "2020-07-18T10:39:00Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:38:44Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 18,
+    "timestamp": "2020-07-18T10:38:41Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:38:24Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 18,
+    "timestamp": "2020-07-18T10:38:23Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:38:05Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 17,
+    "timestamp": "2020-07-18T10:38:04Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:37:46Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 17,
+    "timestamp": "2020-07-18T10:37:45Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:37:28Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 18,
+    "timestamp": "2020-07-18T10:37:27Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:37:09Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 17,
+    "timestamp": "2020-07-18T10:37:08Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:36:50Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 17,
+    "timestamp": "2020-07-18T10:36:49Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:36:32Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 17,
+    "timestamp": "2020-07-18T10:36:31Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:36:12Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 17,
+    "timestamp": "2020-07-18T10:36:12Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:35:55Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 17,
+    "timestamp": "2020-07-18T10:35:53Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:35:37Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 16,
+    "timestamp": "2020-07-18T10:35:35Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:35:17Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 17,
+    "timestamp": "2020-07-18T10:35:16Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:35:01Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 13,
+    "timestamp": "2020-07-18T10:34:58Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:34:40Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 73,
+    "timestamp": "2020-07-18T10:34:39Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:34:23Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 17,
+    "timestamp": "2020-07-18T10:34:20Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:34:02Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 12,
+    "timestamp": "2020-07-18T10:34:02Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:33:44Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 146,
+    "timestamp": "2020-07-18T10:33:43Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:32:51Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 35,
+    "timestamp": "2020-07-18T10:32:50Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:32:32Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 38,
+    "timestamp": "2020-07-18T10:32:31Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:32:00Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 21,
+    "timestamp": "2020-07-18T10:32:00Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:31:42Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 21,
+    "timestamp": "2020-07-18T10:31:41Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:31:25Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 20,
+    "timestamp": "2020-07-18T10:31:22Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:31:04Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 21,
+    "timestamp": "2020-07-18T10:31:04Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:30:47Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 22,
+    "timestamp": "2020-07-18T10:30:45Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:30:27Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 18,
+    "timestamp": "2020-07-18T10:30:26Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:30:09Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 19,
+    "timestamp": "2020-07-18T10:30:08Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:29:31Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 18,
+    "timestamp": "2020-07-18T10:29:30Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:28:55Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 206,
+    "timestamp": "2020-07-18T10:28:53Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:28:36Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 185,
+    "timestamp": "2020-07-18T10:28:35Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:28:17Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 13,
+    "timestamp": "2020-07-18T10:28:16Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:27:39Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 12,
+    "timestamp": "2020-07-18T10:27:39Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:27:20Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 14,
+    "timestamp": "2020-07-18T10:27:20Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:27:01Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 14,
+    "timestamp": "2020-07-18T10:27:01Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:26:24Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 13,
+    "timestamp": "2020-07-18T10:26:24Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:26:06Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 13,
+    "timestamp": "2020-07-18T10:26:05Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:25:48Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 13,
+    "timestamp": "2020-07-18T10:25:47Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:25:29Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 13,
+    "timestamp": "2020-07-18T10:25:28Z"
+    },
+    {
+    "sensor_id": "InnogrLI",
+    "date_received": "2020-07-18T10:25:19Z",
+    "device_id": "INNOGRDEVICEPK",
+    "value": 12,
+    "timestamp": "2020-07-18T10:25:19Z"
+    }
+    ]

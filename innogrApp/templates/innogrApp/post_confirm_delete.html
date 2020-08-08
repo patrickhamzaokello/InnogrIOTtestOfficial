@@ -1,0 +1,39 @@
+{% extends 'innogrApp/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+{% block activelink %}
+<li class="nav-item active nav-profile">
+    {% endblock activelink %}
+
+
+{% block pagebody %}
+
+
+<div class="row">
+    <div class="col-8 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Delete Post</h4>
+                <p class="card-description">
+                    Deleted Post Cannot be Recovered!
+                </p>
+                <form class="forms-sample" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        Are you sure you want to delete the post"{{object.title}}"
+                    </div>
+                    <button type="submit" class="btn btn-outline-danger btn-primary mr-2">Yes Delete</button>
+                    <a class="btn btn-outline-secondary" href="{% url 'post-detail' object.id %}">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 h-100">
+
+    </div>
+</div>
+
+{% endblock pagebody %}

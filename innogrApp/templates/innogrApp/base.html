@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Innogr App</title>
+  <link rel="icon" href="{% static 'innogrApp/images/Fevicon.png' %}" type="image/png">
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static 'innogrApp/vendors/iconfonts/font-awesome/css/all.min.css' %}">
+  <link rel="stylesheet" href="{% static 'innogrApp/vendors/css/vendor.bundle.base.css' %}">
+  <link rel="stylesheet" href="{% static 'innogrApp/vendors/css/vendor.bundle.addons.css' %}">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{% static 'innogrApp/css/style.css' %}">
+  <!-- endinject -->
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/waziup-js@2.0.0-alpha.10/lib/Waziup.js"></script> -->
+
+</head>
+
+<body class="sidebar-fixed">
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row default-layout-navbar">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo" href="/"><img src="{% static 'innogrApp/images/logo.png' %}"
+            alt="logo" /></a>
+        <a class="navbar-brand brand-logo-mini" href="/"><img src="{% static 'innogrApp/images/logo-mini.svg' %}"
+            alt="logo" /></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-stretch">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="fas fa-bars"></span>
+        </button>
+        <ul class="navbar-nav">
+          <form action="{% url 'search' %}" method="post">{% csrf_token %}
+            <li class="nav-item nav-search d-none d-md-flex">
+              <div class="nav-link">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <button type="submit" class="input-group-text">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Search" name="search" aria-label="Search">
+                </div>
+              </div>
+            </li>
+
+          </form>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item d-none d-lg-flex">
+            <a class="nav-link" href="{% url 'post-create' %}">
+              <span class="btn btn-primary">+ Create new</span>
+            </a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
+              data-toggle="dropdown">
+              <i class="fas fa-bell mx-0"></i>
+              <span class="count">16</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+              aria-labelledby="notificationDropdown">
+              <a class="dropdown-item">
+                <p class="mb-0 font-weight-normal float-left">You have 3 new notifications
+                </p>
+                <span class="badge badge-pill badge-warning float-right">View all</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-item-content">
+                  {% if messages %}
+                  {% for message in messages %}
+                  <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                  </div>
+                  {% endfor %}
+                  {% endif %}
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="fas fa-wrench mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-medium">Settings</h6>
+                  <p class="font-weight-light small-text">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="far fa-envelope mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-medium">New user registration</h6>
+                  <p class="font-weight-light small-text">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-envelope mx-0"></i>
+              <span class="count">25</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+              aria-labelledby="messageDropdown">
+              <div class="dropdown-item">
+                <p class="mb-0 font-weight-normal float-left">You have 7 unread mails
+                </p>
+                <span class="badge badge-info badge-pill float-right">View all</span>
+              </div>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <img src="{% static 'innogrApp/images/faces/face4.jpg' %}" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow">
+                  <h6 class="preview-subject ellipsis font-weight-medium">David Grey
+                    <span class="float-right font-weight-light small-text">1 Minutes ago</span>
+                  </h6>
+                  <p class="font-weight-light small-text">
+                    The meeting is cancelled
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <img src="{% static 'innogrApp/images/faces/face2.jpg' %}" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow">
+                  <h6 class="preview-subject ellipsis font-weight-medium">Tim Cook
+                    <span class="float-right font-weight-light small-text">15 Minutes ago</span>
+                  </h6>
+                  <p class="font-weight-light small-text">
+                    New product launch
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <img src="{% static 'innogrApp/images/faces/face3.jpg' %}" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow">
+                  <h6 class="preview-subject ellipsis font-weight-medium"> Johnson
+                    <span class="float-right font-weight-light small-text">18 Minutes ago</span>
+                  </h6>
+                  <p class="font-weight-light small-text">
+                    Upcoming board meeting
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="{{ user.profile.image.url }}" alt="profile" />
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a href="/Profile/Settings" class="dropdown-item">
+                <i class="fas fa-cog text-primary"></i>
+                Settings
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="{% url 'logout' %}" class="dropdown-item">
+                <i class="fas fa-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-block">
+            <a class="nav-link" href="#">
+              <i class="fas fa-ellipsis-h"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+          data-toggle="offcanvas">
+          <span class="fas fa-bars"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="fas fa-fill-drip"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close fa fa-times"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme">
+            <div class="img-ss rounded-circle bg-light border mr-3"></div>Light
+          </div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme">
+            <div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark
+          </div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles primary"></div>
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close fa fa-times"></i>
+        <ul class="nav nav-tabs" id="setting-panel" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab"
+              aria-controls="todo-section" aria-expanded="true">MESSAGES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab"
+              aria-controls="chats-section">UPDATES</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Messages</h4>
+                <div class="preview-list">
+                  <div class="preview-item border-bottom px-0">
+                    <div class="preview-thumbnail">
+                      <img src="{% static 'innogrApp/images/faces/face6.jpg' %}" alt="image" class="rounded-circle">
+                    </div>
+                    <div class="preview-item-content d-flex flex-grow">
+                      <div class="flex-grow">
+                        <h6 class="preview-subject">Richard Joy
+                          <span class="float-right small">
+                            <span class="text-muted pr-3">13.06.2017</span>
+                          </span>
+                        </h6>
+                        <p>Thanks for the support!</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="preview-item border-bottom px-0">
+                    <div class="preview-thumbnail">
+                      <img src="{% static 'innogrApp/images/faces/face8.jpg' %}" alt="image" class="rounded-circle">
+                    </div>
+                    <div class="preview-item-content d-flex flex-grow">
+                      <div class="flex-grow">
+                        <h6 class="preview-subject">William Alex
+                          <span class="float-right small">
+                            <span class="text-muted pr-3">08.07.2017</span>
+                          </span>
+                        </h6>
+                        <p>Meeting is postponed</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="preview-item border-bottom px-0">
+                    <div class="preview-thumbnail">
+                      <img src="{% static 'innogrApp/images/faces/face9.jpg' %}" alt="image" class="rounded-circle">
+                    </div>
+                    <div class="preview-item-content d-flex flex-grow">
+                      <div class="flex-grow">
+                        <h6 class="preview-subject">David Grey
+                          <span class="float-right small">
+                            <span class="text-muted pr-3">15.07.2017</span>
+                          </span>
+                        </h6>
+                        <p>Please approve the request</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="preview-item border-bottom px-0">
+                    <div class="preview-thumbnail">
+                      <img src="{% static 'innogrApp/images/faces/face10.jpg' %}" alt="image" class="rounded-circle">
+                    </div>
+                    <div class="preview-item-content d-flex flex-grow">
+                      <div class="flex-grow">
+                        <h6 class="preview-subject">Aleena Abraham
+                          <span class="float-right small">
+                            <span class="text-muted pr-3">12.06.2017</span>
+                          </span>
+                        </h6>
+                        <p>Hope to see you tomorrow</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+          </div>
+          <!-- To do section tab ends -->
+          <div class="tab-pane fade show active" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+              <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Updates</p>
+              <small
+                class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">Date</small>
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title mb-0">Weather Updates</h4>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-inline-block pt-3">
+                    <div class="d-md-flex">
+                      <h2 class="mb-0">32 &#x2103;</h2>
+                      <div class="d-flex align-items-center ml-md-2 mt-2 mt-md-0">
+                        <i class="far fa-clock text-muted"></i>
+                        <small class=" ml-1 mb-0">Updated: 9:10am</small>
+                      </div>
+                    </div>
+                    <small class="text-gray">Lira, Uganda</small>
+                  </div>
+
+                </div>
+                {% now "jS F Y H:i" %}
+
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <i class="icon-sm fas fa-cloud-download-alt mr-2"></i>
+
+                  Sensor Updates
+                </h4>
+                <ul class="solid-bullet-list">
+                  {% for sensor in sensorCurrent%}
+                  <li>
+                    <h6>{{sensor.name}}</h6>
+                    <p>Value: {{sensor.sensorval}}</p>
+                    <p class="text-muted">
+                      <i class="far fa-clock"></i>
+                      {{sensor.date_recieved}}
+                    </p>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- chat tab ends -->
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          {% block activelink %}
+          <li class="nav-item nav-profile">
+            {% endblock activelink %}
+            <div class="nav-link">
+              <div class="profile-image">
+                <a href="{% url  'profile-posts' user.username  %}">
+                  <img src="{{ user.profile.image.url }}" alt="image" />
+                </a>
+              </div>
+              <div class="profile-name">
+                <p class="name">
+                  Welcome Jane
+                </p>
+                <p class="designation">
+                  {{user.username}}
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home'%}">
+              <i class="fa fa-home menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'MyDevices' %}">
+              <i class="fa fa-desktop menu-icon"></i>
+              <span class="menu-title">My Devices</span>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'news-feed' %}">
+              <i class="fas fa-compass menu-icon"></i>
+              <span class="menu-title">News Feed</span>
+            </a>
+
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#profile" aria-expanded="false" aria-controls="profile">
+              <i class="fas fa fa-user-circle menu-icon"></i>
+              <span class="menu-title">Profile</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="profile">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{% url 'profile-posts' user.username %}">Overview</a>
+                </li>
+                <li class="nav-item"> <a class="nav-link" href="{% url 'Accountsettings' %}">Settings</a></li>
+
+              </ul>
+            </div>
+          </li>
+
+
+
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#govenment" aria-expanded="false"
+              aria-controls="govenment">
+              <i class="fas fa-folder menu-icon"></i>
+              <span class="menu-title">Resources</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="govenment">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{% url 'Resources' %}">Support centers</a></li>
+              </ul>
+            </div>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="innogrcontent-wrapper">
+
+          {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+          </div>
+          {% endfor %}
+          {% endif %}
+
+
+
+
+          <script>
+
+
+            var data = "{%for i in sensordata %}{{i.sensorvalue|escapejs}}{% if not forloop.last %},{% endif %}{% endfor %}"
+            var dataTC = "{%for i in sensordataTc %}{{i.sensorvalue|escapejs}}{% if not forloop.last %},{% endif %}{% endfor %}"
+            var dataHUM = "{%for i in sensordataHUM %}{{i.sensorvalue|escapejs}}{% if not forloop.last %},{% endif %}{% endfor %}"
+            var dataWM = "{%for i in sensordataWM %}{{i.sensorvalue|escapejs}}{% if not forloop.last %},{% endif %}{% endfor %}"
+            var dataWL = "{%for i in sensordataWL %}{{i.sensorvalue|escapejs}}{% if not forloop.last %},{% endif %}{% endfor %}"
+
+
+            //past values//
+            var pdataWL = "{%for i in pastsensordataWL %}{{i.sensorvalue|escapejs}}{% if not forloop.last %},{% endif %}{% endfor %}"
+            var pdataWM = "{%for i in pastsensordataWM %}{{i.sensorvalue|escapejs}}{% if not forloop.last %},{% endif %}{% endfor %}"
+
+
+
+
+
+            var ligtsensorvalues = data.split`,`.map(x => +x);
+            var temperature = dataTC.split`,`.map(x => +x);
+            var humidity = dataHUM.split`,`.map(x => +x);
+            var watermoisture = dataWM.split`,`.map(x => +x);
+            var waterLevel = dataWL.split`,`.map(x => +x);
+
+            temperature.unshift('Temperature');
+            humidity.unshift('Humidity');
+            watermoisture.unshift('Soil_Moisture');
+            ligtsensorvalues.unshift('Light');
+            waterLevel.unshift('Water_Level');
+
+
+            //passval
+            var pastwaterLevel = pdataWL.split`,`.map(x => +x);
+            var pwatermoisture = pdataWM.split`,`.map(x => +x);
+
+            pastwaterLevel.unshift('Past_Water_Level');
+            pwatermoisture.unshift('Past_Soil_Moisture');
+
+
+
+
+          </script>
+
+
+
+
+
+
+          {% block pagebody %}
+
+
+          {% endblock pagebody %}
+
+
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2020 . All rights
+              reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">INNOGR - Innovations For
+              Agriculture</span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="{% static 'innogrApp/vendors/js/vendor.bundle.base.js' %}"></script>
+  <script src="{% static 'innogrApp/vendors/js/vendor.bundle.addons.js' %}"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="{% static 'innogrApp/js/off-canvas.js' %}"></script>
+  <script src="{% static 'innogrApp/js/hoverable-collapse.js' %}"></script>
+  <script src="{% static 'innogrApp/js/misc.js' %}"></script>
+  <script src="{% static 'innogrApp/js/settings.js' %}"></script>
+  <script src="{% static 'innogrApp/js/todolist.js' %}"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="{% static 'innogrApp/js/dashboard.js' %}"></script>
+  <script src="{% static 'innogrApp/js/owl-carousel.js' %}"></script>
+
+  <!-- End custom js for this page-->
+  <script src="{% static 'innogrApp/js/c3.js' %}"></script>
+
+  {% block pagejs %}
+
+
+  {% endblock pagejs %}
+
+</body>
+
+
+</html>

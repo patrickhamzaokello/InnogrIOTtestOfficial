@@ -1,0 +1,224 @@
+{% extends 'innogrApp/base.html' %}
+
+{% load static %}
+
+{% block activelink %}
+<li class="nav-item active nav-profile">
+    {% endblock activelink %}
+
+    {% block pagebody %}
+    <div class="page-header">
+        <h3 class="page-title">
+            Post Details
+        </h3>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10 h-100">
+            <div id="profile-list-left">
+                <div class="card rounded mb-2" style="padding:40px;">
+                    <div class="card-body p-3">
+
+                        <div class="media">
+                            <img src="{{ post.author.profile.image.url }}" alt="image"
+                                class="img-pk mr-3 mb-3 rounded-circle">
+                            <div class="media-body">
+                                <h6 class="mb-1"><a href="{% url 'user-posts' post.author.username %}">
+                                        {{object.author}}</a></h6>
+                                <p>Date Posted:{{object.date_posted|date:"F d, Y"}}</p>
+
+
+                            </div>
+                            <div class="post-button">
+
+                                {% if object.author == user  %}
+
+                                <a class="btn btn-fw btn-secondary btn-sm mt-1 mb-1"
+                                    href="{% url 'post-update' object.id %}">Update</a>
+                                <a class="btn btn-fw btn-danger btn-sm mt-1 mb-1"
+                                    href="{% url 'post-delete' object.id %}">Delete</a>
+
+                                {% endif %}
+
+                            </div>
+                        </div>
+
+                        <p class="text-muted" style="text-align: center;">Last Edit:{{object.last_edited}}</p>
+
+
+                        <h1 class="d-block mb-5"
+                            style="text-align:center;font-size: 45px;font-weight: 700; color: #2f4050;">{{object.title}}
+                        </h1>
+
+
+                        <p class="mb-5" style="font-size: 24px;">
+                            {{object.summary|safe}}
+                        </p>
+
+
+                        <div class="postformat mb-0" style="font-size: 24px;">
+
+                            {{object.content|safe}}
+
+                        </div>
+
+                        <div class="post-button">
+                            <p class="small text-muted mt-2 mb-0">
+                                <span class="likecss">
+                                    <i onClick="document.getElementById('likebutton').submit()"
+                                        class="fa fa-heart mr-1"></i>{{object.likes}}
+                                </span>
+                                <span class="ml-2 dislikecss">
+                                    <i onClick="document.getElementById('dislikebutton').submit()"
+                                        class="fa fa-thumbs-down mr-1"></i>{{object.dislikes}}
+                                </span>
+                                <span class="ml-2">
+                                    <i class="fa fa-mail-reply"></i>
+                                </span>
+                            </p>
+                        </div>
+
+
+
+
+                        <form id="likebutton" method="POST" action="{% url 'postpreference' object.id 1 %}">
+                            {% csrf_token %}
+                            <input type="hidden">
+                        </form>
+
+                        <form id="dislikebutton" method="POST" action="{% url 'postpreference' object.id 2 %}">
+                            {% csrf_token %}
+                            <input type="hidden">
+                        </form>
+
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <i class="fas fa-comments"></i>
+                            Comments...
+                        </h4>
+                        <div class="profile-feed">
+                            {%if not object.comments.all %}
+                            No comments yet .. <a href="#">Add One</a>
+
+                            {% else %}
+
+                            {% for comment in object.comments.all %}
+                            <div class="d-flex align-items-start">
+                                <img src="{{comment.author.profile.image.url}}" alt="profile"
+                                    class="img-sm rounded-circle">
+                                <div class="ml-4">
+                                    <h6>
+                                        {{comment.author}}
+                                        <small class="ml-4 text-muted"><i
+                                                class="far fa-clock mr-1"></i>{{comment.date_posted|timesince}}
+                                            ago</small>
+                                    </h6>
+                                    <p>{{comment.content}}</p>
+                                    <small class="text-muted">{{comment.date_posted}}</small>
+
+                                </div>
+                            </div>
+
+                            {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+        <div class="col-md-2 h-100">
+            {% for post in posts %}
+
+            <div class="card rounded mb-2">
+                <div class="card-body p-3">
+                    <div class="media">
+                        <img src="{{ post.author.profile.image.url }}" alt="image"
+                            class="img-pk mr-3 mb-3 rounded-circle">
+                        <div class="media-body">
+                            <h6 class="mb-1"><a
+                                    href="{% url 'user-posts' username=post.author.username %}">{{post.author}}</a>
+                            </h6>
+                            <p>{{post.date_posted|date:"F d, Y"}}</p>
+                        </div>
+                    </div>
+                    <a class="d-block h5 mb-1" href="{% url 'post-detail' pk=post.id %}">{{post.title}}</a>
+
+                    <p class="mb-0 text-muted">
+                        {{post.summary|slice:":200"}}
+                    </p>
+                    <div class="post-button">
+                        <p class="small text-muted mt-2 mb-0">
+                            <span class="">
+                                <i onClick="document.getElementById('likebutton').submit()"
+                                    class="fa fa-heart mr-1"></i>{{post.likes}}
+                            </span>
+                            <span class="ml-2 ">
+                                <i onClick="document.getElementById('dislikebutton').submit()"
+                                    class="fa fa-thumbs-down mr-1"></i>{{post.dislikes}}
+                            </span>
+                            <span class="ml-2 postmore">
+                                <a href="{% url 'post-detail' pk=post.id %}" class="fa fa-ellipsis-h"></a>
+                            </span>
+                        </p>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+
+            {% if page_obj.has_other_pages %}
+            <nav>
+                <ul class="pagination separated pagination-danger">
+                    {% if page_obj.has_previous %}
+                    <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
+                    <li class="page-item"><a class="page-link"
+                            href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
+                    {% endif %}
+
+                    {% for num in page_obj.paginator.page_range %}
+                    {% if page_obj.number == num %}
+                    <li class="page-item active"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+
+                    {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                    <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+                    {% endif %}
+                    {% endfor %}
+
+                    {% if page_obj.has_next %}
+
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+                    </li>
+                    {% endif %}
+
+                </ul>
+            </nav>
+            {% endif %}
+
+
+
+
+        </div>
+    </div>
+
+
+    {% endblock pagebody %}

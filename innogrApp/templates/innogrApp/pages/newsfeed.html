@@ -1,0 +1,115 @@
+{% extends 'innogrApp/base.html' %}
+
+{% load static %}
+
+
+{% block pagebody %}
+
+<div class="row">
+  <div class="col-md-10 h-100">
+    <div class="card-columns">
+    {% for post in posts %}
+    <div class="card news">
+      <div class="card-body">
+        <div class="media">
+          <img src="{{ post.author.profile.image.url }}" alt="image" class="img-pk mr-3 mb-3 rounded-circle">
+          <div class="media-body">
+            <h6 class="mb-1"><a href="{% url 'user-posts' post.author.username %}">{{post.author}}</a></h6>
+            <p>{{post.date_posted|date:"F d, Y"}}</p>
+          </div>
+        </div>
+        <a class="d-block h5 mb-1" href="{% url 'post-detail' post.id %}">{{post.title}}</a>
+
+        <p class="mb-0 text-muted">
+          {{post.summary|safe}}
+        </p>
+        <div class="post-button">
+          <p class="small text-muted mt-2 mb-0">
+            <span class="likecss">
+              <i onClick="document.getElementById('likebutton').submit()" class="fa fa-heart mr-1"></i>{{post.likes}}
+            </span>
+            <span class="ml-2 dislikecss ">
+              <i onClick="document.getElementById('dislikebutton').submit()"
+                class="fa fa-thumbs-down mr-1"></i>{{post.dislikes}}
+            </span>
+            <span class="ml-2 postmore">
+              <a href="{% url 'post-detail' post.id %}" class="fa fa-ellipsis-h"></a>
+            </span>
+          </p>
+        </div>
+
+
+      </div>
+    </div>
+
+    {% endfor %}
+  </div>
+
+
+    {% if is_paginated %}
+    <nav>
+      <ul class="pagination separated pagination-danger">
+        {% if page_obj.has_previous %}
+        <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
+        <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
+        {% endif %}
+
+        {% for num in page_obj.paginator.page_range %}
+        {% if page_obj.number == num %}
+        <li class="page-item active"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+
+        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+        <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+        {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+
+        <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a></li>
+        <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Last</a></li>
+        {% endif %}
+
+      </ul>
+    </nav>
+    {% endif %}
+
+
+
+  </div>
+  <!-- <div class="col-md-3 h-100">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Innogr Users</h4>
+        {% for user in all_users %}
+        <div class="wrapper d-flex align-items-center py-2 border-bottom">
+          <img class="img-sm rounded-circle" src="{{ user.profile.image.url }}" alt="profile">
+          <div class="wrapper ml-3">
+            <h6 class="mb-1"><a href="{% url 'user-posts' user.username %}">{{user.username}}</a></h6>
+            <small class="text-muted mb-0"><i class="fas far fa-envelope-open mr-1"></i>
+              {{user.email}}</small>
+          </div>
+          <div class="badge badge-pill badge-info ml-auto px-1 py-1"><i
+              class="fas far fa-user-circle font-weight-bold"></i></div>
+        </div>
+
+        {% endfor %}
+      </div>
+    </div>
+  </div> -->
+
+  <div class="col-md-2 grid-margin">
+
+    <div class="fc-external-events">
+      {% for news in allnews_list %}
+      <div class='fc-event'>
+        <p> {{ news.title}} <a href=" {{ news.link}}" target="_blank">more</a></p>
+        <p class="small-text"></p>
+        <p class="text-muted mb-0"> {{ news.newsdate}}</p>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+  
+</div>
+{% endblock pagebody %}

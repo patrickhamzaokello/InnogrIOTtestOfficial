@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<!-- Mirrored from www.urbanui.com/melody/template/pages/samples/register-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Sep 2018 06:08:54 GMT -->
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Innogr App</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static 'innogrApp/vendors/iconfonts/font-awesome/css/all.min.css' %}">
+  <link rel="stylesheet" href="{% static 'innogrApp/vendors/css/vendor.bundle.base.css' %}">
+  <link rel="stylesheet" href="{% static 'innogrApp/vendors/css/vendor.bundle.addons.css' %}">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{% static 'innogrApp/css/style.css' %}">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{% static 'innogrApp/images/logo-mini-fav.svg' %}" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+      {% block logout%}
+      <div class="userform-wrapper d-flex align-items-stretch auth auth-img-bg">
+        <div class="row flex-grow">
+          <div class="col-lg-6 d-flex align-items-center justify-content-center">
+             
+              {% block accountpage %}    {% endblock accountpage %}
+           
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+      </div>
+
+      {% endblock logout %}
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="{% static 'innogrApp/vendors/js/vendor.bundle.base.js' %}"></script>
+    <script src="{% static 'innogrApp/vendors/js/vendor.bundle.addons.js' %}"></script>
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="{% static 'innogrApp/js/off-canvas.js' %}"></script>
+    <script src="{% static 'innogrApp/js/hoverable-collapse.js' %}"></script>
+    <script src="{% static 'innogrApp/js/misc.js' %}"></script>
+    <script src="{% static 'innogrApp/js/settings.js' %}"></script>
+    <script src="{% static 'innogrApp/js/todolist.js' %}"></script>
+    <!-- endinject -->
+  </body>
+  
+  
+  <!-- Mirrored from www.urbanui.com/melody/template/pages/samples/register-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Sep 2018 06:08:54 GMT -->
+  </html>
+  

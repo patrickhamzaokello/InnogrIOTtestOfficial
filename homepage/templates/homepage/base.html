@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<!-- Mirrored from www.urbanui.com/melody/template/pages/layout/horizontal-menu.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Sep 2018 06:05:55 GMT -->
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Innogr App</title>
+    <link rel="icon" href="{% static 'innogrApp/images/logo-mini-fav.svg' %}" type="image/svg">
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="{% static 'innogrApp/vendors/iconfonts/font-awesome/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'innogrApp/vendors/css/vendor.bundle.base.css' %}">
+    <link rel="stylesheet" href="{% static 'innogrApp/vendors/css/vendor.bundle.addons.css' %}">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="{% static 'innogrApp/css/style.css' %}">
+    <!-- endinject -->
+</head>
+
+<body class="horizontal-menu">
+    <div class="container-scroller">
+        <nav class="navbar horizontal-layout-navbar fixed-top navbar-expand-lg">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+                <a class="navbar-brand brand-logo" href="{% url 'innogrhome' %}"><img
+                        src="{% static 'innogrApp/images/logo.png' %}" alt="logo" /></a>
+                <a class="navbar-brand brand-logo-mini" href="{% url 'innogrhome' %}"><img
+                        src="{% static 'innogrApp/images/logo-mini.svg' %}" alt="logo" /></a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex flex-grow">
+                <ul class="navbar-nav navbar-nav-left collapse navbar-collapse" id="horizontal-top-example">
+                    <li class="nav-item ">
+                        <a class="nav-link {% block home %}{% endblock home %} " href="{% url 'innogrhome' %}">
+                            Home
+                        </a>
+                        
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% block doc%}{% endblock doc%}" href="{% url 'innogrlearn' %}">
+                            Documentation
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Tutorials
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'register' %}">
+                            Create Account
+
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">
+                            Sign In
+
+                        </a>
+                    </li>
+                    <li class="nav-item nav-search">
+                        <div class="nav-link">
+                            <div class="search-field d-none d-md-block">
+                                <form class="d-flex align-items-stretch h-100" action="#">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="fas fa-search"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Search your projects ...">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">
+                            <i class="fas fa-power-off font-weight-bold icon-sm"></i>
+                        </a>
+                    </li>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center ml-auto" type="button"
+                    data-toggle="collapse" data-target="#horizontal-top-example">
+                    <span class="fa fa-bars"></span>
+                </button>
+            </div>
+        </nav>
+        <div class="container-fluid page-body-wrapper">
+            <div class="main-panel">
+                <div class="innogrcontent-wrapper">
+
+                    {% block homebody %}
+
+
+
+
+
+                    {% endblock homebody %}
+
+
+                </div>
+                <!-- content-wrapper ends -->
+                <!-- partial:{% static 'innogrApp/partials/_footer.html -->
+                <footer class="footer">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2020 .
+                            All rights
+                            reserved.</span>
+                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">INNOGR - Innovations
+                            For
+                            Agriculture</span>
+                    </div>
+                </footer>
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+
+    <!-- plugins:js -->
+    <script src="{% static 'innogrApp/vendors/js/vendor.bundle.base.js' %}"></script>
+    <script src="{% static 'innogrApp/vendors/js/vendor.bundle.addons.js' %}"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="{% static 'innogrApp/js/off-canvas.js' %}"></script>
+    <script src="{% static 'innogrApp/js/hoverable-collapse.js' %}"></script>
+    <script src="{% static 'innogrApp/js/misc.js' %}"></script>
+    <script src="{% static 'innogrApp/js/settings.js' %}"></script>
+    <script src="{% static 'innogrApp/js/todolist.js' %}"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="{% static 'innogrApp/js/dashboard.js' %}"></script>
+    <script src="{% static 'innogrApp/js/owl-carousel.js' %}"></script>
+
+    <!-- End custom js for this page-->
+    <script src="{% static 'innogrApp/js/c3.js' %}"></script>
+</body>
+
+
+<!-- Mirrored from www.urbanui.com/melody/template/pages/layout/horizontal-menu.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Sep 2018 06:05:55 GMT -->
+
+</html>

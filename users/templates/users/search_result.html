@@ -1,0 +1,126 @@
+{% extends 'innogrApp/base.html' %}
+
+{% block pagebody %}
+
+{% if results %}
+<div class="row">
+    <div class="col-md-8 h-100">
+        <div class="py-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Users Found</h4>
+                    {% for user in results %}
+                    <div class="wrapper d-flex align-items-center py-2 border-bottom">
+                        <img class="img-sm rounded-circle" src="{{ user.profile.image.url }}" alt="profile">
+                        <div class="wrapper ml-3">
+                            <h6 class="mb-1"><a href="{% url 'user-posts' user.username %}">{{user.username}}</a></h6>
+                            <small class="text-muted mb-0"><i class="fas fa-map-marker-alt mr-1"></i>
+                                {{user.email}}</small>
+                        </div>
+                        <div class="badge badge-pill badge-info ml-auto px-1 py-1"><i
+                                class="fas fa-plus font-weight-bold"></i>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="alert alert-info" role="alert">
+    No User exists with that name, please try to search again!
+</div>
+{% endif %}
+
+
+
+{% if posts %}
+<div class="row">
+    <div class="col-md-8 h-100">
+        <h6 class="card-title">
+            User Posts
+        </h6>
+        <div id="profile-list-left" class="py-2">
+            {% for post in posts %}
+
+            <div class="card rounded mb-2">
+                <div class="card-body p-3">
+                    <div class="media">
+                        <img src="{{ post.author.profile.image.url }}" alt="image"
+                            class="img-pk mr-3 mb-3 rounded-circle">
+                        <div class="media-body">
+                            <h6 class="mb-1"><a href="{% url 'user-posts' post.author.username %}">{{post.author}}</a>
+                            </h6>
+                            <p>{{post.date_posted|date:"F d, Y"}}</p>
+                        </div>
+                    </div>
+                    <a class="d-block h4 mb-0" href="{% url 'post-detail' post.id %}">{{post.title}}</a>
+
+                    <p class="mb-0 text-muted">
+                        {{post.summary}}
+                    </p>
+                    <div class="post-button">
+                        <p class="small text-muted mt-2 mb-0">
+                            <span>
+                                <i class="fa fa-star mr-1"></i>4
+                            </span>
+                            <span class="ml-2">
+                                <i class="fa fa-comment mr-1"></i>11
+                            </span>
+
+                            <span class="ml-2">
+                                <i class="fa  fa-ellipsis-h mr-1"></i>
+                            </span>
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+        {% if is_paginated %}
+        <nav>
+            <ul class="pagination separated pagination-danger">
+                {% if page_obj.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                </li>
+                {% endif %}
+
+                {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                <li class="page-item active"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+
+                {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+                {% endif %}
+                {% endfor %}
+
+                {% if page_obj.has_next %}
+
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Last</a></li>
+                {% endif %}
+
+            </ul>
+        </nav>
+        {% endif %}
+
+
+
+    </div>
+</div>
+
+{% else %}
+<div class="alert alert-info" role="alert">
+    No Post Results, please try to search again!
+</div>
+{% endif %}
+
+{% endblock pagebody %}
