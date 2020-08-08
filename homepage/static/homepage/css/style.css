@@ -7190,8 +7190,6 @@ body.landing-page {
   width: 100%;
 }
 .landing-page .header-back.one {
-  /* background: url('../img/landing/header_one.jpg') 50% 0 no-repeat; */
-  /* background: #36176f; */
   background: linear-gradient(-90deg,#02203c,#001528);
 }
 .landing-page .header-back.two {
