@@ -11,7 +11,7 @@ class PostAdmin(admin.ModelAdmin):
 
 
 class NewsAdmin(admin.ModelAdmin):
-    list_filter = ['newsdate']
+    # list_filter = ['newsdate']
     search_fields = ['title']
     list_display = ('title','newsdate')
     
@@ -32,7 +32,7 @@ class CurrentsensorAdmin(admin.ModelAdmin):
 admin.site.register(Comment)
 admin.site.register(Preference)    
 admin.site.register(Post,PostAdmin)
-admin.site.register(NewsArticle)
+admin.site.register(NewsArticle,NewsAdmin)
 admin.site.register(Sensor,SensorAdmin)
 admin.site.register(Currentreading,CurrentsensorAdmin)
 admin.site.register(Job)

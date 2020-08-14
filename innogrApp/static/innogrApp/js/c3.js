@@ -62,7 +62,7 @@
 
   });
 
-  var c3LineChart = c3.generate({
+  var wlc3LineChart = c3.generate({
     bindto: '#WL-line-chart',
     data: {
       columns: [
@@ -158,7 +158,7 @@
 
 
 
-  var c3SplineChart = c3.generate({
+  var dhtc3SplineChart = c3.generate({
     bindto: '#DHT-spline-chart',
     data: {
       columns: [
@@ -192,7 +192,7 @@
       }
     }
   });
-  var c3SplineChart = c3.generate({
+  var lumc3SplineChart = c3.generate({
     bindto: '#c3-spline-chart',
     data: {
       columns: [
@@ -217,61 +217,9 @@
 
     }
   });
-  var c3BarChart = c3.generate({
-    bindto: '#c3-bar-chart',
-    data: {
-      columns: [
-        ['data1', 30, 200, 100, 400, 150, 250],
-        ['data2', 130, 100, 140, 200, 150, 50]
-      ],
-      type: 'bar'
-    },
-    color: {
-      pattern: ['rgba(88,216,163,1)', 'rgba(4,189,254,0.6)', 'rgba(237,28,36,0.6)']
-    },
-    padding: {
-      top: 0,
-      right: 0,
-      bottom: 30,
-      left: 0,
-    },
-    bar: {
-      width: {
-        ratio: 0.7 // this makes bar width 50% of length between ticks
-      }
-    }
-  });
+  
 
-  setTimeout(function () {
-    c3BarChart.load({
-      columns: [
-        ['data3', 130, -150, 200, 300, -200, 100]
-      ]
-    });
-  }, 1000);
 
-  var c3StepChart = c3.generate({
-    bindto: '#c3-step-chart',
-    data: {
-      columns: [
-        ['data1', 300, 350, 300, 0, 0, 100],
-        ['data2', 130, 100, 140, 200, 150, 50]
-      ],
-      types: {
-        data1: 'step',
-        data2: 'area-step'
-      }
-    },
-    color: {
-      pattern: ['rgba(88,216,163,1)', 'rgba(4,189,254,0.6)', 'rgba(237,28,36,0.6)']
-    },
-    padding: {
-      top: 0,
-      right: 0,
-      bottom: 30,
-      left: 0,
-    }
-  });
   var c3PieChart = c3.generate({
     bindto: '#c3-pie-chart',
     data: {

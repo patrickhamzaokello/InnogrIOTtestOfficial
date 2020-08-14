@@ -20,10 +20,11 @@ from users.forms import UserRegistrationForm,UserUpdateForm,ProfileUpdateForm
 
 @login_required
 def dashboard(request):
-    messages.success(request, f'Welcome Back')
+    # messages.success(request, f'Welcome Back')
     
     posts = Post.objects.order_by('-likes')[0:8]
-    news = NewsArticle.objects.order_by('-newsdate')[0:15]
+    news = NewsArticle.objects.all()[0:15]
+    # news = NewsArticle.objects.filter(title__contains='Daily')
     
     #sensor value from database        
     sensordataLI = Sensor.objects.all().filter(sensorname='InnogrLI').values('sensorvalue')[4:12]

@@ -31,8 +31,8 @@ class NewsArticle(models.Model):
     newsdate = models.CharField(max_length=300)
     def __str__(self):
         return self.title
-    class Meta:
-        ordering = ['title']
+    # class Meta:
+    #     ordering = ['title']
     class Admin:
         pass
     
