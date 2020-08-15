@@ -50,6 +50,9 @@ def dashboard(request):
     usergot = User.objects.filter(pk=data_counter['author']).first()
     all_users.append(usergot)
     
+    
+    Currentreading.objects.all().delete()
+    
    
     context = {
         

@@ -79,8 +79,7 @@ class Currentreading(models.Model):
     
     def __str__(self):
         return self.name
-    class Meta:
-        ordering = ['last_update']
+  
     class Admin:
         pass
     

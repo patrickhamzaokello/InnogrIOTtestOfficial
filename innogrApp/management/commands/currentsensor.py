@@ -19,12 +19,15 @@ class Command(BaseCommand):
             # check if url in db
             try:
                 # save in db
-                Currentreading.objects.create(
-                    name=name,
+                
+                Currentreading.objects.filter(name=name).update(
+                    
                     sensorval=val,
-                    date_recieved=daterecieved
+                    date_recieved=daterecieved 
+                    
                 )
-                print('%s added' % (name,))
+
+                print('%s updated' % (name,))
             except:
                 print('%s already exists' % (name,))
         self.stdout.write( 'Current Sensor job complete' )
