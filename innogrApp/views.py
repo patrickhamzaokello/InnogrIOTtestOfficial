@@ -51,7 +51,7 @@ def dashboard(request):
     all_users.append(usergot)
     
     
-    # Currentreading.objects.all().delete()
+    NewsArticle.objects.all().delete()
     
    
     context = {
