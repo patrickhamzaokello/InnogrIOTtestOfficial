@@ -3,6 +3,7 @@ from urllib.request import urlopen, Request
 import requests
 import json
 from innogrApp.models import Currentreading
+import datetime
 class Command(BaseCommand):
     help = "collect current sensor data"
     # define logic of command
@@ -20,14 +21,27 @@ class Command(BaseCommand):
             try:
                 # save in db
                 
+                # Currentreading.objects.create(
+                #     name=name,
+                #     sensorval=val,
+                #     date_recieved=daterecieved
+                # )
+                
+                obj = Currentreading.objects.get(name=name)
+                
                 Currentreading.objects.filter(name=name).update(
                     
+                    name=name,
                     sensorval=val,
-                    date_recieved=daterecieved 
-                    
+                    date_recieved=daterecieved,
+                    # last_update =  datetime.datetime.now()
+                                       
                 )
-
-                print('%s updated' % (name,))
-            except:
-                print('%s already exists' % (name,))
+                print('%s updating' % (name,))
+                
+            except Currentreading.DoesNotExist:                
+                obj = Currentreading(name=name,sensorval=val, date_recieved=daterecieved)
+                obj.save()
+                
+                print('%s creating' % (name,))
         self.stdout.write( 'Current Sensor job complete' )
