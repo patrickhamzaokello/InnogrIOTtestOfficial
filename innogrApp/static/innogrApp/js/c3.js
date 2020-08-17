@@ -13,6 +13,17 @@
 
   });
 
+  setTimeout(function () {
+    c3LineChart.load({
+        columns:[
+           watermoisture
+        ],
+        types: {
+        Soil_Moisture: 'area-spline'
+      }
+    });
+}, 400)
+
   var TMLineChart = c3.generate({
     bindto: '#TM-line-chart',
     data: {
@@ -28,6 +39,17 @@
     }
 
   });
+
+  setTimeout(function () {
+    TMLineChart.load({
+        columns:[
+           temperature
+        ],
+        types: {
+        Temperature: 'spline'
+      }
+    });
+}, 400)
 
   var HumallLineChart = c3.generate({
     bindto: '#HUM-line-chart',
@@ -45,6 +67,17 @@
 
   });
 
+   setTimeout(function () {
+    HumallLineChart.load({
+       columns: [
+        humidity
+      ],
+      types: {
+        Humidity: 'area'
+      }
+    });
+}, 400)
+
 
   var WateallLineChart = c3.generate({
     bindto: '#watelevel-line-chart',
@@ -61,6 +94,19 @@
     }
 
   });
+
+   setTimeout(function () {
+    WateallLineChart.load({
+      columns: [
+        waterLevel
+      ],
+      types: {
+        Water_Level: 'spline'
+      }
+    });
+}, 400)
+
+  
 
   var wlc3LineChart = c3.generate({
     bindto: '#WL-line-chart',
@@ -101,6 +147,16 @@
 
   });
 
+   setTimeout(function () {
+    wlc3LineChart.load({
+          columns: [
+        pastwaterLevel,
+        waterLevel
+
+      ]
+    });
+}, 400)
+
   var c3LightLineChart = c3.generate({
     bindto: '#DLight-line-chart',
     data: {
@@ -116,6 +172,14 @@
     }
 
   });
+
+  setTimeout(function () {
+    c3LightLineChart.load({
+        columns: [
+            ligtsensorvalues
+        ]
+    });
+}, 400);
 
   var c3waterMoistureChart = c3.generate({
     bindto: '#DWM-line-chart',
@@ -156,6 +220,15 @@
 
   });
 
+  setTimeout(function () {
+    c3waterMoistureChart.load({
+        columns: [
+           pwatermoisture,
+        watermoisture
+        ]
+    });
+}, 400);
+
 
 
   var dhtc3SplineChart = c3.generate({
@@ -192,6 +265,16 @@
       }
     }
   });
+
+setTimeout(function () {
+    dhtc3SplineChart.load({
+        columns: [
+           humidity,
+        temperature
+        ]
+    });
+}, 400);
+
   var lumc3SplineChart = c3.generate({
     bindto: '#c3-spline-chart',
     data: {
@@ -218,7 +301,13 @@
     }
   });
   
-
+setTimeout(function () {
+    lumc3SplineChart.load({
+        columns: [
+           ligtsensorvalues
+        ]
+    });
+}, 400);
 
   var c3PieChart = c3.generate({
     bindto: '#c3-pie-chart',
