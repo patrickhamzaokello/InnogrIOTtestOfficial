@@ -38,6 +38,7 @@ ALLOWED_HOSTS = ['innogriottest.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'messenging.apps.MessengingConfig',
     'innogrApp.apps.InnograppConfig',
     'homepage.apps.HomepageConfig',
     'users.apps.UsersConfig',
@@ -154,6 +155,12 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
+
+
+#Twilio credentials
+TWILIO_ACCOUNT_SID = 'AC3cfe13dc949e5ef6d98622af42230ce6'
+TWILIO_AUTH_TOKEN = '8e87e368c4e96750057fbddbade24311'
+TWILIO_NUMBER = '+14155238886'
 
 CACHES = {
     "default": {

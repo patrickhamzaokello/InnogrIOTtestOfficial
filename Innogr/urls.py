@@ -29,6 +29,7 @@ urlpatterns = [
     path('search/', user_views.SearchView, name='search'),
     path('innogr/', include('innogrApp.urls')),
     path('', include('homepage.urls')),
+    path('sms/', include('messenging.urls'))
     
 
 ]
