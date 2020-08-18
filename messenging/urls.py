@@ -5,6 +5,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.sms, name='sms'),
+    path('', views.whatsapp, name='whatsapp'),
+    path('pk', views.normal, name='normal')
 
 ]
