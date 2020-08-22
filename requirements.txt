@@ -1,4 +1,5 @@
 amqp==2.5.2
+ansicon==1.89.0
 arrow==0.15.8
 asgiref==3.2.7
 asn1crypto==0.24.0
@@ -10,10 +11,10 @@ bs4==0.0.1
 cachetools==4.1.0
 celery==4.4.2
 certifi==2019.6.16
-cffi==1.12.3
+cffi==1.14.2
 chardet==3.0.4
 click==7.1.1
-cryptography==2.7
+cryptography==3.0
 cycler==0.10.0
 decorator==4.4.2
 dj-database-url==0.5.0
@@ -45,12 +46,14 @@ google-auth-httplib2==0.0.3
 googleapis-common-protos==1.52.0
 gunicorn==19.9.0
 heroku==0.1.4
+heroku3==4.2.1
 html5lib==1.0.1
 httplib2==0.18.1
 idna==2.8
 importlib-metadata==1.6.0
 itsdangerous==1.1.0
 Jinja2==2.11.1
+jinxed==1.0.1
 joblib==0.15.1
 kiwisolver==1.1.0
 kombu==4.6.8
