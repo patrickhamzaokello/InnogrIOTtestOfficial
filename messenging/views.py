@@ -14,15 +14,12 @@ def whatsapp(request):
     phone_no  = phone_no[9:]
     reply = "Hello %s, Your Question has been Recieved! We shall get Back to you" % (phone_no)
     resp = MessagingResponse()
+        
+    # save in db
+    b = Whatsapp(title='Beatles Blog', phone='All the latest Beatles news.')
+    b.save()
     
-    try:
-        # save in db
-        b = Whatsapp(title='Beatles Blog', phone='All the latest Beatles news.')
-        b.save()
-       
-        print('%s saved' % (phone_no,))
-    except:
-        print('%s already exists' % (phone_no,))
+    print('%s saved' % (phone_no,))
 
     # Create reply
     msg = msg.lower()
