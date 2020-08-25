@@ -16,7 +16,7 @@ def whatsapp(request):
     resp = MessagingResponse()
         
     # save in db
-    b = Whatsapp(title='Beatles Blog', phone='All the latest Beatles news.')
+    b = Whatsapp(title=msg , phone=phone_no)
     b.save()
     
     print('%s saved' % (phone_no,))
