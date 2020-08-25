@@ -5,6 +5,7 @@ from django_twilio.decorators import twilio_view
 from twilio.twiml.messaging_response import MessagingResponse
 from .models import Whatsapp
 
+
 @twilio_view
 def whatsapp(request):
     
@@ -16,10 +17,9 @@ def whatsapp(request):
     
     try:
         # save in db
-        Whatsapp.objects.create(
-            title=msg,
-            phone=phone_no
-        )
+        b = Whatsapp(title='Beatles Blog', phone='All the latest Beatles news.')
+        b.save()
+       
         print('%s saved' % (phone_no,))
     except:
         print('%s already exists' % (phone_no,))
