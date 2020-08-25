@@ -15,7 +15,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from users.forms import UserRegistrationForm,UserUpdateForm,ProfileUpdateForm
 
-
+from messenging.models import Whatsapp
 
 
 @login_required
@@ -200,12 +200,16 @@ class NewsFeedPostListView(LoginRequiredMixin, ListView):
         # else:
         #     data['preference'] = False
         
-        news = NewsArticle.objects.order_by('-newsdate')[0:15]
+        news = NewsArticle.objects.all()
+        whatsappposts = Whatsapp.objects.order_by('-date_posted').all()
+
         
         data['preference'] = Preference.objects.all()
         # print(Preference.objects.get(user= self.request.user))
         data['all_users'] = all_users
         data['allnews_list'] = news
+        data['whatsappposts'] = whatsappposts
+
         
         print(all_users, file=sys.stderr)
         return data

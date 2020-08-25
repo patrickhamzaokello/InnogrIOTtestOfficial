@@ -4,46 +4,176 @@
 
 
 {% block pagebody %}
-
 <div class="row">
-  <div class="col-md-10 h-100">
-    <div class="card-columns">
-    {% for post in posts %}
-    <div class="card news">
+  <div class="col-md-5 grid-margin grid-margin-md-0 stretch-card">
+    <div class="card">
       <div class="card-body">
-        <div class="media">
-          <img src="{{ post.author.profile.image.url }}" alt="image" class="img-pk mr-3 mb-3 rounded-circle">
-          <div class="media-body">
-            <h6 class="mb-1"><a href="{% url 'user-posts' post.author.username %}">{{post.author}}</a></h6>
-            <p>{{post.date_posted|date:"F d, Y"}}</p>
-          </div>
+        <div class="d-flex justify-content-between">
+          <h4 class="card-title">👨‍🌾 Latests WhatsApp Posts </h4>
+          <i class="fas fa-ellipsis-v"></i>
         </div>
-        <a class="d-block h5 mb-1" href="{% url 'post-detail' post.id %}">{{post.title}}</a>
-
-        <p class="mb-0 text-muted">
-          {{post.summary|safe}}
-        </p>
-        <div class="post-button">
-          <p class="small text-muted mt-2 mb-0">
-            <span class="likecss">
-              <i onClick="document.getElementById('likebutton').submit()" class="fa fa-heart mr-1"></i>{{post.likes}}
-            </span>
-            <span class="ml-2 dislikecss ">
-              <i onClick="document.getElementById('dislikebutton').submit()"
-                class="fa fa-thumbs-down mr-1"></i>{{post.dislikes}}
-            </span>
-            <span class="ml-2 postmore">
-              <a href="{% url 'post-detail' post.id %}" class="fa fa-ellipsis-h"></a>
-            </span>
-          </p>
+        <p class="card-description  border-bottom">Public Requests Posted On WhatsApp</p>
+        <div class="overflow">
+        <div id="postrefresh">
+            {% for news in whatsappposts %}
+          <div class="list d-flex align-items-center border-bottom py-3">
+            <img class="img-sm rounded-circle" src="{% static 'innogrApp/images/questions.png' %}" alt="">
+            <div class="wrapper w-100 ml-3">
+              <p class="mb-0"><b>{{ news.title}} </b></p>
+              <br />
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                  <i class="far fa-clock text-muted mr-1"></i>
+                  <p class="mb-0">{{ news.date_posted|timesince}}</p>
+                </div>
+                <small class="text-muted ml-auto">{{news.phone}}</small>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
         </div>
 
 
       </div>
     </div>
-
-    {% endfor %}
   </div>
+  <div class="col-md-4 grid-margin grid-margin-md-0 stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <h4 class="card-title">📰📶 News Updates</h4>
+          <i class="fas fa-ellipsis-v"></i>
+        </div>
+        <p class="card-description  border-bottom">News snippets from various sites</p>
+        <div class="overflow">
+          <div class="fc-external-events">
+
+          {% for news in allnews_list %}
+          <div class='fc-event'>
+            <p> {{ news.title}} <a href=" {{ news.link}}" target="_blank">more</a></p>
+            <p class="small-text"></p>
+            <p class="text-muted mb-0"> {{ news.newsdate}}</p>
+          </div>
+          {% endfor %}
+        </div>
+        </div>
+
+
+      </div>
+    </div>
+   
+  </div>
+  <div class="col-md-3 grid-margin grid-margin-md-0 stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Messages</h4>
+        <div class="preview-list">
+          <div class="preview-item border-bottom px-0">
+            <div class="preview-thumbnail">
+              <img src="../images/faces/face6.jpg" alt="image" class="rounded-circle">
+            </div>
+            <div class="preview-item-content d-flex flex-grow">
+              <div class="flex-grow">
+                <h6 class="preview-subject">Richard Joy
+                  <span class="float-right small">
+                    <span class="text-muted pr-3">13.06.2017</span>
+                  </span>
+                </h6>
+                <p>Thanks for the support!</p>
+              </div>
+            </div>
+          </div>
+          <div class="preview-item border-bottom px-0">
+            <div class="preview-thumbnail">
+              <img src="../images/faces/face8.jpg" alt="image" class="rounded-circle">
+            </div>
+            <div class="preview-item-content d-flex flex-grow">
+              <div class="flex-grow">
+                <h6 class="preview-subject">William Alex
+                  <span class="float-right small">
+                    <span class="text-muted pr-3">08.07.2017</span>
+                  </span>
+                </h6>
+                <p>Meeting is postponed</p>
+              </div>
+            </div>
+          </div>
+          <div class="preview-item border-bottom px-0">
+            <div class="preview-thumbnail">
+              <img src="../images/faces/face9.jpg" alt="image" class="rounded-circle">
+            </div>
+            <div class="preview-item-content d-flex flex-grow">
+              <div class="flex-grow">
+                <h6 class="preview-subject">David Grey
+                  <span class="float-right small">
+                    <span class="text-muted pr-3">15.07.2017</span>
+                  </span>
+                </h6>
+                <p>Please approve the request</p>
+              </div>
+            </div>
+          </div>
+          <div class="preview-item border-bottom px-0">
+            <div class="preview-thumbnail">
+              <img src="../images/faces/face11.html" alt="image" class="rounded-circle">
+            </div>
+            <div class="preview-item-content d-flex flex-grow">
+              <div class="flex-grow">
+                <h6 class="preview-subject">Aleena Abraham
+                  <span class="float-right small">
+                    <span class="text-muted pr-3">12.06.2017</span>
+                  </span>
+                </h6>
+                <p>Hope to see you tomorrow</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 h-100">
+    <div class="card-columns">
+      {% for post in posts %}
+      <div class="card news">
+        <div class="card-body">
+          <div class="media">
+            <img src="{{ post.author.profile.image.url }}" alt="image" class="img-pk mr-3 mb-3 rounded-circle">
+            <div class="media-body">
+              <h6 class="mb-1"><a href="{% url 'user-posts' post.author.username %}">{{post.author}}</a></h6>
+              <p>{{post.date_posted|date:"F d, Y"}}</p>
+            </div>
+          </div>
+          <a class="d-block h5 mb-1" href="{% url 'post-detail' post.id %}">{{post.title}}</a>
+
+          <p class="mb-0 text-muted">
+            {{post.summary|safe}}
+          </p>
+          <div class="post-button">
+            <p class="small text-muted mt-2 mb-0">
+              <span class="likecss">
+                <i onClick="document.getElementById('likebutton').submit()" class="fa fa-heart mr-1"></i>{{post.likes}}
+              </span>
+              <span class="ml-2 dislikecss ">
+                <i onClick="document.getElementById('dislikebutton').submit()"
+                  class="fa fa-thumbs-down mr-1"></i>{{post.dislikes}}
+              </span>
+              <span class="ml-2 postmore">
+                <a href="{% url 'post-detail' post.id %}" class="fa fa-ellipsis-h"></a>
+              </span>
+            </p>
+          </div>
+
+
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
 
 
     {% if is_paginated %}
@@ -76,40 +206,21 @@
 
 
   </div>
-  <!-- <div class="col-md-3 h-100">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title">Innogr Users</h4>
-        {% for user in all_users %}
-        <div class="wrapper d-flex align-items-center py-2 border-bottom">
-          <img class="img-sm rounded-circle" src="{{ user.profile.image.url }}" alt="profile">
-          <div class="wrapper ml-3">
-            <h6 class="mb-1"><a href="{% url 'user-posts' user.username %}">{{user.username}}</a></h6>
-            <small class="text-muted mb-0"><i class="fas far fa-envelope-open mr-1"></i>
-              {{user.email}}</small>
-          </div>
-          <div class="badge badge-pill badge-info ml-auto px-1 py-1"><i
-              class="fas far fa-user-circle font-weight-bold"></i></div>
-        </div>
-
-        {% endfor %}
-      </div>
-    </div>
-  </div> -->
-
-  <div class="col-md-2 grid-margin">
-
-    <div class="fc-external-events">
-      {% for news in allnews_list %}
-      <div class='fc-event'>
-        <p> {{ news.title}} <a href=" {{ news.link}}" target="_blank">more</a></p>
-        <p class="small-text"></p>
-        <p class="text-muted mb-0"> {{ news.newsdate}}</p>
-      </div>
-      {% endfor %}
-
-    </div>
-  </div>
   
+
 </div>
+
+<script>
+  setInterval(
+    // Here is where to do things like dom manipulation
+    function updateDiv() {
+      $("#postrefresh").load(window.location.href + " #postrefresh");
+    },
+
+    // Here is where you set the interval asuming I want to update every 1 second
+    2000
+  );
+</script>
+
+
 {% endblock pagebody %}

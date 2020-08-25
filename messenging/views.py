@@ -10,7 +10,8 @@ def whatsapp(request):
     
     msg = request.POST.get('Body','')
     phone_no = request.POST.get('From','')
-    reply = "Hello %s, how are you today?" % (phone_no)
+    phone_no  = phone_no[9:]
+    reply = "Hello %s, Your Question has been Recieved! We shall get Back to you" % (phone_no)
     resp = MessagingResponse()
     
     try:

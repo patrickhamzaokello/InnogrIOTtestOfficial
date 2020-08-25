@@ -8746,6 +8746,12 @@ p {
   margin-bottom: 1rem;
 }
 
+.overflow {
+  height: 400px;
+  overflow: auto;
+  padding: 0 20px 0 0;
+}
+
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
@@ -19857,7 +19863,46 @@ body,
 html {
   overflow-x: hidden;
   padding-right: 0 !important;
+  --scrollbarBG: #fafafa;
+  --thumbBG: #90A4AE;
 }
+
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body{
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+
+
+.overflow::-webkit-scrollbar {
+  width: 11px;
+}
+.overflow{
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+.overflow::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+.overflow::-webkit-scrollbar-thumb {
+  background-color:var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+
+
 
 *:-moz-full-screen,
 *:-webkit-full-screen,
@@ -27558,7 +27603,7 @@ body.avgrund-active {
 }
 
 .fc-external-events .fc-event {
-  background: #ffffff;
+  background: #e0efe0;
   color: #000;
   border-width: 0 0 0 4px;
   padding: 16px;
@@ -27582,7 +27627,7 @@ body.avgrund-active {
   border-color: #0B94F7;
 }
 
-.fc-external-events .fc-event:nth-child(4) {
+.fc-external-events .fc-event:nth-child(5) {
   border-color: #F5A623;
 }
 
