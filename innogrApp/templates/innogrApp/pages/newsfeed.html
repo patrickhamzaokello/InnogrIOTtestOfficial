@@ -5,6 +5,29 @@
 
 {% block pagebody %}
 <div class="row">
+  <div class="col-md-4 grid-margin grid-margin-md-0">
+
+    <div class="widget">
+            
+      <div class="left-panel panel">
+          <div class="date">
+             {{weather.0.date_recieved|date:"l M,d Y"}}
+          </div>
+          <div class="city">
+              {{weather.0.district}}
+          </div>
+          <div class="temp">
+             {{weather.0.temp}}&deg;
+          </div>
+      </div>
+      <div class="right-panel panel">
+          <img src="https://s5.postimg.cc/lifnombwz/mumbai1.png" alt="" width="160">
+      </div>
+
+  </div>
+
+
+  </div>
   <div class="col-md-5 grid-margin grid-margin-md-0 stretch-card">
     <div class="card">
       <div class="card-body">
@@ -38,100 +61,30 @@
       </div>
     </div>
   </div>
-  <div class="col-md-4 grid-margin grid-margin-md-0 stretch-card">
+
+  <div class="col-md-3 grid-margin grid-margin-md-0 ">
+
     <div class="card">
       <div class="card-body">
-        <div class="d-flex justify-content-between">
-          <h4 class="card-title">📰📶 News Updates</h4>
-          <i class="fas fa-ellipsis-v"></i>
-        </div>
-        <p class="card-description  border-bottom">News snippets from various sites</p>
-        <div class="overflow">
-          <div class="fc-external-events">
-
-          {% for news in allnews_list %}
-          <div class='fc-event'>
-            <p> {{ news.title}} <a href=" {{ news.link}}" target="_blank">more</a></p>
-            <p class="small-text"></p>
-            <p class="text-muted mb-0"> {{ news.newsdate}}</p>
-          </div>
-          {% endfor %}
-        </div>
-        </div>
-
-
+          <h4 class="card-title">News Updates</h4>
       </div>
     </div>
+
+    <div class="overflow">
+      <div class="fc-external-events">
+
+      {% for news in allnews_list %}
+      <div class='fc-event'>
+        <p> {{ news.title}} <a href=" {{ news.link}}" target="_blank">more</a></p>
+        <p class="small-text"></p>
+        <p class="text-muted mb-0"> {{ news.newsdate}}</p>
+      </div>
+      {% endfor %}
+    </div>
+    </div>
+
+    
    
-  </div>
-  <div class="col-md-3 grid-margin grid-margin-md-0 stretch-card">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title">Messages</h4>
-        <div class="preview-list">
-          <div class="preview-item border-bottom px-0">
-            <div class="preview-thumbnail">
-              <img src="../images/faces/face6.jpg" alt="image" class="rounded-circle">
-            </div>
-            <div class="preview-item-content d-flex flex-grow">
-              <div class="flex-grow">
-                <h6 class="preview-subject">Richard Joy
-                  <span class="float-right small">
-                    <span class="text-muted pr-3">13.06.2017</span>
-                  </span>
-                </h6>
-                <p>Thanks for the support!</p>
-              </div>
-            </div>
-          </div>
-          <div class="preview-item border-bottom px-0">
-            <div class="preview-thumbnail">
-              <img src="../images/faces/face8.jpg" alt="image" class="rounded-circle">
-            </div>
-            <div class="preview-item-content d-flex flex-grow">
-              <div class="flex-grow">
-                <h6 class="preview-subject">William Alex
-                  <span class="float-right small">
-                    <span class="text-muted pr-3">08.07.2017</span>
-                  </span>
-                </h6>
-                <p>Meeting is postponed</p>
-              </div>
-            </div>
-          </div>
-          <div class="preview-item border-bottom px-0">
-            <div class="preview-thumbnail">
-              <img src="../images/faces/face9.jpg" alt="image" class="rounded-circle">
-            </div>
-            <div class="preview-item-content d-flex flex-grow">
-              <div class="flex-grow">
-                <h6 class="preview-subject">David Grey
-                  <span class="float-right small">
-                    <span class="text-muted pr-3">15.07.2017</span>
-                  </span>
-                </h6>
-                <p>Please approve the request</p>
-              </div>
-            </div>
-          </div>
-          <div class="preview-item border-bottom px-0">
-            <div class="preview-thumbnail">
-              <img src="../images/faces/face11.html" alt="image" class="rounded-circle">
-            </div>
-            <div class="preview-item-content d-flex flex-grow">
-              <div class="flex-grow">
-                <h6 class="preview-subject">Aleena Abraham
-                  <span class="float-right small">
-                    <span class="text-muted pr-3">12.06.2017</span>
-                  </span>
-                </h6>
-                <p>Hope to see you tomorrow</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 

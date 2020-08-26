@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post,NewsArticle,Comment,Sensor,Preference,Currentreading,Job
+from .models import Post,NewsArticle,Comment,Sensor,Preference,Currentreading,Job,Weather
 # Register your models here.
 
 
@@ -26,6 +26,11 @@ class CurrentsensorAdmin(admin.ModelAdmin):
     list_filter = ['last_update']
     search_fields = ['name']
     list_display = ('name','sensorval','date_recieved','last_update')
+
+class Weatherupdate(admin.ModelAdmin):
+    list_filter = ['date_recieved']
+    search_fields = ['district']
+    list_display = ('district','temp','hum','windsp','maindes','desc','date_recieved')
    
     
 
@@ -36,6 +41,8 @@ admin.site.register(NewsArticle,NewsAdmin)
 admin.site.register(Sensor,SensorAdmin)
 admin.site.register(Currentreading,CurrentsensorAdmin)
 admin.site.register(Job)
+admin.site.register(Weather,Weatherupdate)
+
 
 
 

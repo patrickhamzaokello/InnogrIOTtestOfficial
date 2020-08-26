@@ -95,3 +95,16 @@ class Job(models.Model):
         ordering = ['title']
     class Admin:
         pass
+
+class Weather(models.Model):
+    district = models.CharField(max_length=200)
+    temp = models.CharField(max_length=250)
+    hum = models.CharField(max_length=250)
+    windsp = models.CharField(max_length=250)
+    maindes = models.CharField(max_length=250)
+    desc = models.CharField(max_length=250)
+    
+    date_recieved = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.district

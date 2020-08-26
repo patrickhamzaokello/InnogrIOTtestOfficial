@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from .models import Post,NewsArticle, Comment, Preference,Sensor,Currentreading
+from .models import Post,NewsArticle, Comment, Preference,Sensor,Currentreading,Weather
 from django.contrib.auth.models import User
 from django.views.generic import (
     ListView, 
@@ -16,6 +16,10 @@ from django.contrib.auth.decorators import login_required
 from users.forms import UserRegistrationForm,UserUpdateForm,ProfileUpdateForm
 
 from messenging.models import Whatsapp
+
+
+import requests
+import json
 
 
 @login_required
@@ -202,6 +206,8 @@ class NewsFeedPostListView(LoginRequiredMixin, ListView):
         
         news = NewsArticle.objects.all()
         whatsappposts = Whatsapp.objects.order_by('-date_posted').all()
+        weather = Weather.objects.all()
+
 
         
         data['preference'] = Preference.objects.all()
@@ -209,6 +215,8 @@ class NewsFeedPostListView(LoginRequiredMixin, ListView):
         data['all_users'] = all_users
         data['allnews_list'] = news
         data['whatsappposts'] = whatsappposts
+        data['weather'] = weather
+
 
         
         print(all_users, file=sys.stderr)
