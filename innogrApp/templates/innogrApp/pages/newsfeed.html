@@ -5,30 +5,8 @@
 
 {% block pagebody %}
 <div class="row">
-  <div class="col-md-4 grid-margin grid-margin-md-0">
 
-    <div class="widget">
-            
-      <div class="left-panel panel">
-          <div class="date">
-             {{weather.0.date_recieved|date:"l M,d Y"}}
-          </div>
-          <div class="city">
-              {{weather.0.district}}
-          </div>
-          <div class="temp">
-             {{weather.0.temp}}&deg;
-          </div>
-      </div>
-      <div class="right-panel panel">
-          <img src="https://s5.postimg.cc/lifnombwz/mumbai1.png" alt="" width="160">
-      </div>
-
-  </div>
-
-
-  </div>
-  <div class="col-md-5 grid-margin grid-margin-md-0 stretch-card">
+  <div class="col-md-5 grid-margin grid-margin-md-0 ">
     <div class="card">
       <div class="card-body">
         <div class="d-flex justify-content-between">
@@ -37,24 +15,24 @@
         </div>
         <p class="card-description  border-bottom">Public Requests Posted On WhatsApp</p>
         <div class="overflow">
-        <div id="postrefresh">
+          <div id="postrefresh">
             {% for news in whatsappposts %}
-          <div class="list d-flex align-items-center border-bottom py-3">
-            <img class="img-sm rounded-circle" src="{% static 'innogrApp/images/questions.png' %}" alt="">
-            <div class="wrapper w-100 ml-3">
-              <p class="mb-0"><b>{{ news.title}} </b></p>
-              <br />
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="d-flex align-items-center">
-                  <i class="far fa-clock text-muted mr-1"></i>
-                  <p class="mb-0">{{ news.date_posted|timesince}}</p>
+            <div class="list d-flex align-items-center border-bottom py-3">
+              <img class="img-sm rounded-circle" src="{% static 'innogrApp/images/questions.png' %}" alt="">
+              <div class="wrapper w-100 ml-3">
+                <p class="mb-0"><b>{{ news.title}} </b></p>
+                <br />
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center">
+                    <i class="far fa-clock text-muted mr-1"></i>
+                    <p class="mb-0">{{ news.date_posted|timesince}}</p>
+                  </div>
+                  <small class="text-muted ml-auto">{{news.phone}}</small>
                 </div>
-                <small class="text-muted ml-auto">{{news.phone}}</small>
               </div>
             </div>
+            {% endfor %}
           </div>
-          {% endfor %}
-        </div>
         </div>
 
 
@@ -62,56 +40,72 @@
     </div>
   </div>
 
-  <div class="col-md-3 grid-margin grid-margin-md-0 ">
+  <div class="col-md-2 grid-margin grid-margin-md-0 ">
 
-    <div class="card">
-      <div class="card-body">
-          <h4 class="card-title">News Updates</h4>
-      </div>
-    </div>
 
-    <div class="overflow">
-      <div class="fc-external-events">
+        <div class="overflow">
+          <div class="fc-external-events">
 
-      {% for news in allnews_list %}
-      <div class='fc-event'>
-        <p> {{ news.title}} <a href=" {{ news.link}}" target="_blank">more</a></p>
-        <p class="small-text"></p>
-        <p class="text-muted mb-0"> {{ news.newsdate}}</p>
-      </div>
-      {% endfor %}
-    </div>
-    </div>
+            {% for news in allnews_list %}
+            <div class='fc-event'>
+              <p> {{ news.title}} <a href=" {{ news.link}}" target="_blank">more</a></p>
+              <p class="small-text"></p>
+              <p class="text-muted mb-0"> {{ news.newsdate}}</p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
 
+     
     
-   
-  </div>
-</div>
 
-<div class="row">
-  <div class="col-md-12 h-100">
-    <div class="card-columns">
+  </div>
+
+  <div class="col-md-5 grid-margin grid-margin-md-0">
+
+    <div class="widget">
+
+      <div class="left-panel panel">
+        <div class="date">
+          {{weather.0.date_recieved|date:"l M,d Y"}}
+        </div>
+        <div class="city">
+          {{weather.0.district}}
+        </div>
+        <div class="temp">
+          {{weather.0.temp}}&deg;
+        </div>
+      </div>
+      <div class="right-panel panel">
+        <img src="https://s5.postimg.cc/lifnombwz/mumbai1.png" alt="" width="160">
+      </div>
+
+    </div>
+
+    <div class="articles">
       {% for post in posts %}
-      <div class="card news">
-        <div class="card-body">
+  
+      <div class="card rounded mb-2">
+        <div class="card-body p-3">
           <div class="media">
             <img src="{{ post.author.profile.image.url }}" alt="image" class="img-pk mr-3 mb-3 rounded-circle">
             <div class="media-body">
               <h6 class="mb-1"><a href="{% url 'user-posts' post.author.username %}">{{post.author}}</a></h6>
-              <p>{{post.date_posted|date:"F d, Y"}}</p>
+              <p>{{post.date_posted|date:"F d, Y"}}: {{post.date_posted|timesince}} ago</p>
+  
             </div>
           </div>
           <a class="d-block h5 mb-1" href="{% url 'post-detail' post.id %}">{{post.title}}</a>
-
+  
           <p class="mb-0 text-muted">
             {{post.summary|safe}}
           </p>
           <div class="post-button">
             <p class="small text-muted mt-2 mb-0">
-              <span class="likecss">
+              <span class="">
                 <i onClick="document.getElementById('likebutton').submit()" class="fa fa-heart mr-1"></i>{{post.likes}}
               </span>
-              <span class="ml-2 dislikecss ">
+              <span class="ml-2 ">
                 <i onClick="document.getElementById('dislikebutton').submit()"
                   class="fa fa-thumbs-down mr-1"></i>{{post.dislikes}}
               </span>
@@ -120,13 +114,29 @@
               </span>
             </p>
           </div>
-
-
+  
+  
         </div>
+  
       </div>
-
+  
       {% endfor %}
+  
+  
     </div>
+
+   
+
+  
+
+
+
+  </div>
+</div>
+
+<!-- <div class="row">
+  <div class="col-md-12 h-100">
+  
 
 
     {% if is_paginated %}
@@ -159,9 +169,9 @@
 
 
   </div>
-  
 
-</div>
+
+</div> -->
 
 <script>
   setInterval(
