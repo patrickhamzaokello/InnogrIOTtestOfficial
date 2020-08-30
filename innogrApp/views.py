@@ -27,18 +27,18 @@ def dashboard(request):
     # messages.success(request, f'Welcome Back')
     
     posts = Post.objects.order_by('-likes')[0:8]
-    news = NewsArticle.objects.all()[0:15]
+    news = NewsArticle.objects.order_by('-newsdate')
     # news = NewsArticle.objects.filter(title__contains='Daily')
     
     #sensor value from database        
-    sensordataLI = Sensor.objects.all().filter(sensorname='InnogrLI').values('sensorvalue')[4:12]
+    sensordataLI = Sensor.objects.all().filter(sensorname='InnogrLI').values('sensorvalue')[4:11]
     sensordataTC = Sensor.objects.all().filter(sensorname='InnogrTC').values('sensorvalue')
-    sensordataWM = Sensor.objects.all().filter(sensorname='InnogrWM').values('sensorvalue')[4:12]
+    sensordataWM = Sensor.objects.all().filter(sensorname='InnogrWM').values('sensorvalue')[4:11]
     sensordataHUM = Sensor.objects.all().filter(sensorname='InnogrHUM').values('sensorvalue')
-    sensordataWL = Sensor.objects.all().filter(sensorname='InnogrWL').values('sensorvalue')[4:12]
+    sensordataWL = Sensor.objects.all().filter(sensorname='InnogrWL').values('sensorvalue')[4:11]
     
-    pastsensordataWL = Sensor.objects.all().filter(sensorname='InnogrWL').values('sensorvalue')[13:21]
-    pastsensordataWM = Sensor.objects.all().filter(sensorname='InnogrWM').values('sensorvalue')[13:21]
+    pastsensordataWL = Sensor.objects.all().filter(sensorname='InnogrWL').values('sensorvalue')[13:20]
+    pastsensordataWM = Sensor.objects.all().filter(sensorname='InnogrWM').values('sensorvalue')[13:20]
     
     sensorCurrent = Currentreading.objects.order_by('-last_update')
       
