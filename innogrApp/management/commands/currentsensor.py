@@ -34,7 +34,7 @@ class Command(BaseCommand):
                     name=name,
                     sensorval=val,
                     date_recieved=daterecieved,
-                    # last_update =  datetime.datetime.now()
+                    last_update =  datetime.datetime.now()
                                        
                 )
                 print('%s updating' % (name,))
