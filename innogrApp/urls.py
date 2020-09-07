@@ -23,7 +23,6 @@ urlpatterns = [
     path('post/<int:pk>/delete', PostDeleteView.as_view(), name='post-delete'),
     path('user/<str:username>', UserPostListView.as_view(), name='user-posts'),
     path('profile/<str:user>', UserProfileListView.as_view(), name='profile-posts'),
-    # url(r'^(?P<postid>\d+)/preference/(?P<userpreference>\d+)/$', postpreference, name='postpreference'),
     path('posts/<int:postid>/preference/<int:userpreference>', views.postpreference, name='postpreference'),
     path('newsFeed', NewsFeedPostListView.as_view(), name='news-feed'),
     

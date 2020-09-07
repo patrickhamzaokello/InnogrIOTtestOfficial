@@ -40,7 +40,6 @@ ALLOWED_HOSTS = ['innogriottest.herokuapp.com']
 INSTALLED_APPS = [
     'messenging.apps.MessengingConfig',
     'innogrApp.apps.InnograppConfig',
-    'homepage.apps.HomepageConfig',
     'users.apps.UsersConfig',
     'crispy_forms',
     'ckeditor',
