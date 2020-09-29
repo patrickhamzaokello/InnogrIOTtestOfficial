@@ -41,7 +41,7 @@
             <h2> {{sensorCurrent.2.sensorval}} &#x2103;</h2>
             <label class="badge badge-outline-success badge-pill">2.7% increase</label>
             <p>
-              Updated - {{sensorCurrent.2.last_update|timesince}} ago
+              {{sensorCurrent.2.last_update|timesince}} ago
             </p>
           </div>
           <div class="statistics-item">
@@ -53,7 +53,7 @@
             <h2>{{sensorCurrent.4.sensorval}} %</h2>
             <label class="badge badge-outline-danger badge-pill">30% decrease</label>
             <p>
-              Updated - {{sensorCurrent.4.last_update|timesince}} ago
+            {{sensorCurrent.4.last_update|timesince}} ago
             </p>
           </div>
           <div class="statistics-item">
@@ -64,7 +64,7 @@
             <h2>{{sensorCurrent.3.sensorval}} lux</h2>
             <label class="badge badge-outline-success badge-pill">12% increase</label>
             <p>
-              Updated - {{sensorCurrent.3.last_update|timesince}} ago
+              {{sensorCurrent.3.last_update|timesince}} ago
             </p>
           </div>
           <div class="statistics-item">
@@ -75,7 +75,7 @@
             <h2>{{sensorCurrent.0.sensorval}} %</h2>
             <label class="badge badge-outline-success badge-pill">57% increase</label>
             <p>
-              Updated -  {{sensorCurrent.0.last_update|timesince}} ago
+              {{sensorCurrent.0.last_update|timesince}} ago
             </p>
           </div>
           <div class="statistics-item">
@@ -86,7 +86,7 @@
             <h2>{{sensorCurrent.1.sensorval}} &#8467;</h2>
             <label class="badge badge-outline-success badge-pill">10% increase</label>
             <p>
-              Updated - {{sensorCurrent.1.last_update|timesince}} ago
+              {{sensorCurrent.1.last_update|timesince}} ago
             </p>
           </div>
 
@@ -100,7 +100,7 @@
     <div class="card">
       <div class="card-body">
         <h4 class="card-title">
-          Soil Moisture Variation
+          Soil Moisture Variation of this Week and Last Week (X-axis represents Days of the Week Starting  From Sundy)
         </h4>
         <div id="DWM-line-chart"></div>
       </div>
@@ -110,7 +110,7 @@
   <div class="col-md-6 grid-margin stretch-card">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title">Water Level Variations</h4>
+        <h4 class="card-title">Water Level Variations of this Week and Last Week  (X-axis represents Days of the Week Starting  From Sundy)</h4>
         <div id="WL-line-chart"></div>
       </div>
     </div>
@@ -130,7 +130,7 @@
   <div class="col-md-12 grid-margin stretch-card">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title">Temperature & Humidity Variations</h4>
+        <h4 class="card-title">Temperature & Humidity Variations for Past 100 Data Points</h4>
         <div id="DHT-spline-chart"></div>
       </div>
     </div>
@@ -185,7 +185,7 @@
     <div class="card">
       <div class="card-body d-flex flex-column">
         <h4 class="card-title">
-          Market Value
+          Popular in Production
         </h4>
         <div class="flex-grow-1 d-flex flex-column justify-content-between">
           <canvas id="sales-status-chart" class="mt-3"></canvas>
@@ -198,7 +198,8 @@
     <div class="card">
       <div class="card-body d-flex flex-column">
         <h4 class="card-title">
-          Daily Sales
+        Agricultural Sectors
+          
         </h4>
         <div class="flex-grow-1 d-flex flex-column justify-content-between">
           <canvas id="daily-sales-chart" class="mt-3 mb-3 mb-md-0"></canvas>

@@ -142,7 +142,7 @@
         type: 'pie',
         data: {
           datasets: [{
-            data: [75, 25, 15, 10],
+            data: [30, 25, 40, 5],
             backgroundColor: [
               'red',
               'orange',
@@ -159,10 +159,10 @@
       
           // These labels appear in the legend and in the tooltips when hovering different arcs
           labels: [
-            'Active users',
-            'Subscribers',
-            'New visitors',
-            'Others'
+            'Beans',
+            'Soya Beans',
+            'Maize',
+            'Sun-Flower'
           ]
         },
         options: {
@@ -195,7 +195,7 @@
     if ($("#daily-sales-chart").length) {
       var dailySalesChartData = {
         datasets: [{
-          data: [50, 10, 10, 30],
+          data: [40, 35, 8, 17],
           backgroundColor: [
             '#392c70',
             '#04b76b',
@@ -207,10 +207,10 @@
     
         // These labels appear in the legend and in the tooltips when hovering different arcs
         labels: [
-          'Mail order sales',
-          'Instore sales',
-          'Download sales',
-          'Sales return'
+          'Food Crop',
+          'Animal Rearing',
+          'Fisheries',
+          'Cash Crop'
         ]
       };
       var dailySalesChartOptions = {

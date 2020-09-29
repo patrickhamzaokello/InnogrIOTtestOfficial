@@ -57,7 +57,7 @@
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item d-none d-lg-flex">
             <a class="nav-link" href="{% url 'post-create' %}">
-              <span class="btn btn-primary">+ Create new</span>
+              <span class="btn btn-primary">+ Create new Post</span>
             </a>
           </li>
 
@@ -65,16 +65,15 @@
             <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
               data-toggle="dropdown">
               <i class="fas fa-bell mx-0"></i>
-              <span class="count">16</span>
+              <span class="count">3</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
               aria-labelledby="notificationDropdown">
               <a class="dropdown-item">
-                <p class="mb-0 font-weight-normal float-left">You have 3 new notifications
+                <p class="mb-0 font-weight-normal float-left">Updates From Innogr Team
                 </p>
-                <span class="badge badge-pill badge-warning float-right">View all</span>
+                <span class="badge badge-pill badge-warning float-right">Innogr</span>
               </a>
-              <div class="dropdown-divider"></div>
               <a class="dropdown-item preview-item">
                 <div class="preview-item-content">
                   {% if messages %}
@@ -94,9 +93,9 @@
                   </div>
                 </div>
                 <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-medium">Settings</h6>
+                  <h6 class="preview-subject font-weight-medium">WhatsApp Posts</h6>
                   <p class="font-weight-light small-text">
-                    Private message
+                    Post Directly using WhatsApp
                   </p>
                 </div>
               </a>
@@ -104,75 +103,33 @@
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
                   <div class="preview-icon bg-info">
-                    <i class="far fa-envelope mx-0"></i>
+                    <i class="fas fa-wrench mx-0"></i>
                   </div>
                 </div>
                 <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-medium">New user registration</h6>
+                  <h6 class="preview-subject font-weight-medium">News Summary</h6>
                   <p class="font-weight-light small-text">
-                    2 days ago
+                    From all your Fav News Sites
+                  </p>
+                </div>
+              </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-info">
+                      <i class="fas fa-wrench mx-0"></i>
+                    </div>
+                  </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-medium">Sensor Page</h6>
+                  <p class="font-weight-light small-text">
+                    A Separate Page for More Customization
                   </p>
                 </div>
               </a>
             </div>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown"
-              aria-expanded="false">
-              <i class="fas fa-envelope mx-0"></i>
-              <span class="count">25</span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-              aria-labelledby="messageDropdown">
-              <div class="dropdown-item">
-                <p class="mb-0 font-weight-normal float-left">You have 7 unread mails
-                </p>
-                <span class="badge badge-info badge-pill float-right">View all</span>
-              </div>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <img src="{% static 'innogrApp/images/faces/face4.jpg' %}" alt="image" class="profile-pic">
-                </div>
-                <div class="preview-item-content flex-grow">
-                  <h6 class="preview-subject ellipsis font-weight-medium">David Grey
-                    <span class="float-right font-weight-light small-text">1 Minutes ago</span>
-                  </h6>
-                  <p class="font-weight-light small-text">
-                    The meeting is cancelled
-                  </p>
-                </div>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <img src="{% static 'innogrApp/images/faces/face2.jpg' %}" alt="image" class="profile-pic">
-                </div>
-                <div class="preview-item-content flex-grow">
-                  <h6 class="preview-subject ellipsis font-weight-medium">Tim Cook
-                    <span class="float-right font-weight-light small-text">15 Minutes ago</span>
-                  </h6>
-                  <p class="font-weight-light small-text">
-                    New product launch
-                  </p>
-                </div>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <img src="{% static 'innogrApp/images/faces/face3.jpg' %}" alt="image" class="profile-pic">
-                </div>
-                <div class="preview-item-content flex-grow">
-                  <h6 class="preview-subject ellipsis font-weight-medium"> Johnson
-                    <span class="float-right font-weight-light small-text">18 Minutes ago</span>
-                  </h6>
-                  <p class="font-weight-light small-text">
-                    Upcoming board meeting
-                  </p>
-                </div>
-              </a>
-            </div>
-          </li>
+         
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
               <img src="{{ user.profile.image.url }}" alt="profile" />
@@ -189,11 +146,7 @@
               </a>
             </div>
           </li>
-          <li class="nav-item nav-settings d-none d-lg-block">
-            <a class="nav-link" href="#">
-              <i class="fas fa-ellipsis-h"></i>
-            </a>
-          </li>
+         
         </ul>
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
           data-toggle="offcanvas">
@@ -204,171 +157,8 @@
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
       <!-- partial:partials/_settings-panel.html -->
-      <div class="theme-setting-wrapper">
-        <div id="settings-trigger"><i class="fas fa-fill-drip"></i></div>
-        <div id="theme-settings" class="settings-panel">
-          <i class="settings-close fa fa-times"></i>
-          <p class="settings-heading">SIDEBAR SKINS</p>
-          <div class="sidebar-bg-options selected" id="sidebar-light-theme">
-            <div class="img-ss rounded-circle bg-light border mr-3"></div>Light
-          </div>
-          <div class="sidebar-bg-options" id="sidebar-dark-theme">
-            <div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark
-          </div>
-          <p class="settings-heading mt-2">HEADER SKINS</p>
-          <div class="color-tiles mx-0 px-4">
-            <div class="tiles primary"></div>
-            <div class="tiles success"></div>
-            <div class="tiles warning"></div>
-            <div class="tiles danger"></div>
-            <div class="tiles info"></div>
-            <div class="tiles dark"></div>
-            <div class="tiles default"></div>
-          </div>
-        </div>
-      </div>
-      <div id="right-sidebar" class="settings-panel">
-        <i class="settings-close fa fa-times"></i>
-        <ul class="nav nav-tabs" id="setting-panel" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab"
-              aria-controls="todo-section" aria-expanded="true">MESSAGES</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab"
-              aria-controls="chats-section">UPDATES</a>
-          </li>
-        </ul>
-        <div class="tab-content" id="setting-content">
-          <div class="tab-pane fade scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Messages</h4>
-                <div class="preview-list">
-                  <div class="preview-item border-bottom px-0">
-                    <div class="preview-thumbnail">
-                      <img src="{% static 'innogrApp/images/faces/face6.jpg' %}" alt="image" class="rounded-circle">
-                    </div>
-                    <div class="preview-item-content d-flex flex-grow">
-                      <div class="flex-grow">
-                        <h6 class="preview-subject">Richard Joy
-                          <span class="float-right small">
-                            <span class="text-muted pr-3">13.06.2017</span>
-                          </span>
-                        </h6>
-                        <p>Thanks for the support!</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="preview-item border-bottom px-0">
-                    <div class="preview-thumbnail">
-                      <img src="{% static 'innogrApp/images/faces/face8.jpg' %}" alt="image" class="rounded-circle">
-                    </div>
-                    <div class="preview-item-content d-flex flex-grow">
-                      <div class="flex-grow">
-                        <h6 class="preview-subject">William Alex
-                          <span class="float-right small">
-                            <span class="text-muted pr-3">08.07.2017</span>
-                          </span>
-                        </h6>
-                        <p>Meeting is postponed</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="preview-item border-bottom px-0">
-                    <div class="preview-thumbnail">
-                      <img src="{% static 'innogrApp/images/faces/face9.jpg' %}" alt="image" class="rounded-circle">
-                    </div>
-                    <div class="preview-item-content d-flex flex-grow">
-                      <div class="flex-grow">
-                        <h6 class="preview-subject">David Grey
-                          <span class="float-right small">
-                            <span class="text-muted pr-3">15.07.2017</span>
-                          </span>
-                        </h6>
-                        <p>Please approve the request</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="preview-item border-bottom px-0">
-                    <div class="preview-thumbnail">
-                      <img src="{% static 'innogrApp/images/faces/face10.jpg' %}" alt="image" class="rounded-circle">
-                    </div>
-                    <div class="preview-item-content d-flex flex-grow">
-                      <div class="flex-grow">
-                        <h6 class="preview-subject">Aleena Abraham
-                          <span class="float-right small">
-                            <span class="text-muted pr-3">12.06.2017</span>
-                          </span>
-                        </h6>
-                        <p>Hope to see you tomorrow</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-
-          </div>
-          <!-- To do section tab ends -->
-          <div class="tab-pane fade show active" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
-            <div class="d-flex align-items-center justify-content-between border-bottom">
-              <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Updates</p>
-              <small
-                class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">Date</small>
-            </div>
-
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title mb-0">Weather Updates</h4>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="d-inline-block pt-3">
-                    <div class="d-md-flex">
-                      <h2 class="mb-0">32 &#x2103;</h2>
-                      <div class="d-flex align-items-center ml-md-2 mt-2 mt-md-0">
-                        <i class="far fa-clock text-muted"></i>
-                        <small class=" ml-1 mb-0">Updated: 9:10am</small>
-                      </div>
-                    </div>
-                    <small class="text-gray">Lira, Uganda</small>
-                  </div>
-
-                </div>
-                {% now "jS F Y H:i" %}
-
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">
-                  <i class="icon-sm fas fa-cloud-download-alt mr-2"></i>
-
-                  Sensor Updates
-                </h4>
-                <ul class="solid-bullet-list">
-                  {% for sensor in sensorCurrent%}
-                  <li>
-                    <h6>{{sensor.name}}</h6>
-                    <p>Value: {{sensor.sensorval}}</p>
-                    <p class="text-muted">
-                      <i class="far fa-clock"></i>
-                      {{sensor.date_recieved}}
-                    </p>
-                  </li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </div>
-
-
-          </div>
-          <!-- chat tab ends -->
-        </div>
-      </div>
+      
+     
       <!-- partial -->
       <!-- partial:partials/_sidebar.html -->
 
@@ -385,7 +175,7 @@
               </div>
               <div class="profile-name">
                 <p class="name">
-                  Welcome Jane
+                  Welcome
                 </p>
                 <p class="designation">
                   {{user.username}}
@@ -491,7 +281,7 @@
 
             temperature.unshift('Temperature');
             humidity.unshift('Humidity');
-            watermoisture.unshift('Soil_Moisture');
+            watermoisture.unshift('Current_Week_Soil_Moisture');
             ligtsensorvalues.unshift('Light');
             waterLevel.unshift('Water_Level');
 
@@ -501,7 +291,7 @@
             var pwatermoisture = pdataWM.split`,`.map(x => +x);
 
             pastwaterLevel.unshift('Past_Water_Level');
-            pwatermoisture.unshift('Past_Soil_Moisture');
+            pwatermoisture.unshift('Past_Week_Soil_Moisture');
 
 
 

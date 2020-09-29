@@ -74,21 +74,22 @@
     bindto: '#WL-line-chart',
     data: {
       columns: [
+        waterLevel,
         pastwaterLevel,
-        waterLevel
+
 
       ],
       axes: {
         Past_Water_Level: 'y2'
       },
       types: {
-        Past_Water_Level: 'step',
-        Water_Level: 'area-step'
+        Past_Water_Level: 'spline',
+        Water_Level: 'spline'
 
       }
     },
     color: {
-      pattern: ['rgba(88,216,163,1)', 'rgba(4,189,254,0.6)']
+      pattern: ['red', 'orange']
     },
     axis: {
       y: {
@@ -133,26 +134,27 @@
     bindto: '#DWM-line-chart',
     data: {
       columns: [
+        watermoisture,
         pwatermoisture,
-        watermoisture
+
 
       ],
       axes: {
-        Past_Soil_Moisture: 'y2'
+        Past_Week_Soil_Moisture: 'y2'
       },
       types: {
-        Past_Soil_Moisture: 'bar',
-        Soil_Moisture: 'bar'
+        Past_Week_Soil_Moisture: 'bar',
+        Current_Week_Soil_Moisture: 'bar'
 
       }
     },
     color: {
-      pattern: ['#c5ea9a', '#0cab12']
+      pattern: ['#0cab12','#c5ea9a']
     },
     axis: {
       y: {
         label: {
-          text: 'Litres',
+          text: 'Past Week Sensor Values (Percentage (%))',
           position: 'outer-middle'
         }
 
@@ -160,7 +162,7 @@
       y2: {
         show: true,
         label: {
-          text: 'Litres',
+          text: 'Present Week Sensor Values (Percentage (%))',
           position: 'outer-middle'
         }
       }
