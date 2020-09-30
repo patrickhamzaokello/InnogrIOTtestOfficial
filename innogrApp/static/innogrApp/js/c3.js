@@ -94,7 +94,7 @@
     axis: {
       y: {
         label: {
-          text: 'Litres',
+          text: 'Current Week Water Level In Percentage(%)',
           position: 'outer-middle'
         }
 
@@ -102,8 +102,8 @@
       y2: {
         show: true,
         label: {
-          text: 'Litres',
-          position: 'outer-middle'
+          text: 'Last Week Water Level In Percentage(%)',
+          position: 'outer-middle',
         }
       }
     }
@@ -154,7 +154,7 @@
     axis: {
       y: {
         label: {
-          text: 'Past Week Sensor Values (Percentage (%))',
+          text: 'Present Week Sensor Values (Percentage (%))',
           position: 'outer-middle'
         }
 
@@ -162,7 +162,7 @@
       y2: {
         show: true,
         label: {
-          text: 'Present Week Sensor Values (Percentage (%))',
+          text: 'Past Week Sensor Values (Percentage (%))',
           position: 'outer-middle'
         }
       }

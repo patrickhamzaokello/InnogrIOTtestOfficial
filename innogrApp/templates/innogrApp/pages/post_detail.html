@@ -7,16 +7,12 @@
     {% endblock activelink %}
 
     {% block pagebody %}
-    <div class="page-header">
-        <h3 class="page-title">
-            Post Details
-        </h3>
-    </div>
+  
 
     <div class="row">
         <div class="col-md-8 h-100">
             <div id="profile-list-left">
-                <div class="card rounded mb-2" style="padding:40px;">
+                <div class="card rounded mb-2">
                     <div class="card-body p-3">
 
                         <div class="media">
@@ -41,42 +37,43 @@
                                 {% endif %}
 
                             </div>
+                            <div class="post-button">
+                                <p class="small text-muted mt-2 mb-0">
+                                    <span class="likecss">
+                                        <i onClick="document.getElementById('likebutton').submit()"
+                                            class="fa fa-heart mr-1"></i>{{object.likes}}
+                                    </span>
+                                    <span class="ml-2 dislikecss">
+                                        <i onClick="document.getElementById('dislikebutton').submit()"
+                                            class="fa fa-thumbs-down mr-1"></i>{{object.dislikes}}
+                                    </span>
+                                    <span class="ml-2">
+                                        <i class="fa fa-mail-reply"></i>
+                                    </span>
+                                </p>
+                            </div>
                         </div>
 
                         <p class="text-muted" style="text-align: center;">Last Edit:{{object.last_edited}}</p>
 
 
                         <h1 class="d-block mb-5"
-                            style="text-align:center;font-size: 30px;font-weight: 700; color: #2f4050;">{{object.title}}
+                            style="text-align:center;font-size: 1.3rem;font-weight: 700; color: #2f4050;">{{object.title}}
                         </h1>
 
 
-                        <p class="mb-5" style="font-size: 24px;">
+                        <p class="mb-5"  style="font-size: 1.0rem;">
                             {{object.summary|safe}}
                         </p>
 
 
-                        <div class="postformat mb-0" style="font-size: 24px;">
+                        <div class="postformat mb-0" style="font-size: 1.0rem;">
 
                             {{object.content|safe}}
 
                         </div>
 
-                        <div class="post-button">
-                            <p class="small text-muted mt-2 mb-0">
-                                <span class="likecss">
-                                    <i onClick="document.getElementById('likebutton').submit()"
-                                        class="fa fa-heart mr-1"></i>{{object.likes}}
-                                </span>
-                                <span class="ml-2 dislikecss">
-                                    <i onClick="document.getElementById('dislikebutton').submit()"
-                                        class="fa fa-thumbs-down mr-1"></i>{{object.dislikes}}
-                                </span>
-                                <span class="ml-2">
-                                    <i class="fa fa-mail-reply"></i>
-                                </span>
-                            </p>
-                        </div>
+                       
 
 
 

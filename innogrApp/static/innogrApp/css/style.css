@@ -39136,8 +39136,8 @@ div.tagsinput span.tag a {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 20px;
-  color: #5a5a5a;
+  font-size: 1.0rem;
+  color: #000;
 }
 
 .news a:hover {
